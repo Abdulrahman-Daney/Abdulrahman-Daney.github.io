@@ -1,187 +1,412 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Abdulrahman Daney | Software Engineer</title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Fira Code', monospace;
-      background-color: #0f172a;
-      color: #e2e8f0;
-      line-height: 1.6;
-    }
-    .container {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 2rem;
-    }
-    .header, .section, .footer {
-      background-color: #1e293b;
-      border-radius: 10px;
-      padding: 2rem;
-      margin-bottom: 2rem;
-      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
-    }
-    .profile-image {
-      font-size: 4rem;
-      color: #38bdf8;
-      margin-bottom: 1rem;
-    }
-    .name {
-      font-size: 2rem;
-      font-weight: 600;
-      color: #f8fafc;
-    }
-    .title {
-      font-size: 1.1rem;
-      color: #94a3b8;
-    }
-    .contact-info {
-      margin-top: 1rem;
-      font-size: 0.95rem;
-      color: #cbd5e1;
-    }
-    .section-title {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-      color: #f1f5f9;
-    }
-    .project-card, .skill-category, .timeline-item {
-      background-color: #334155;
-      padding: 1rem;
-      border-radius: 8px;
-      margin-bottom: 1rem;
-    }
-    .project-title, .skill-category h3, .timeline-item h3 {
-      color: #f8fafc;
-    }
-    .project-description, .skill-list, .timeline-item p {
-      color: #cbd5e1;
-      font-size: 0.95rem;
-    }
-    .skill-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-    .skill-item {
-      background-color: #1e293b;
-      padding: 0.4rem 0.8rem;
-      border-radius: 4px;
-      font-size: 0.85rem;
-    }
-    .social-links {
-      display: flex;
-      gap: 15px;
-      justify-content: center;
-      margin-top: 1rem;
-    }
-    .social-link {
-      font-size: 1.2rem;
-      color: #94a3b8;
-      transition: color 0.2s;
-    }
-    .social-link:hover {
-      color: #38bdf8;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <header class="header" style="text-align: center;">
-      <div class="profile-image"><i class="fas fa-user-astronaut"></i></div>
-      <h1 class="name">Abdulrahman Daney</h1>
-      <p class="title">Software Engineering Student | Full-Stack Developer</p>
-      <div class="contact-info">
-        📧 abood053111@gmail.com &nbsp; | &nbsp; 📱 +60 11-2714 5178 &nbsp; | &nbsp; 🌍 Johor, Malaysia
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abdulrahman Daney | Software Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #0a0a0a;
+        color: #a1a1aa;
+      }
+      .fira-code {
+        font-family: "Fira Code", monospace;
+      }
+      .card-link {
+        display: block;
+        text-decoration: none;
+        color: inherit;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .card-link:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+          0 8px 10px -6px rgb(0 0 0 / 0.1);
+      }
+      .card-link .external-link-icon {
+        transition: color 0.3s ease;
+      }
+      .card-link:hover .external-link-icon {
+        color: #38bdf8;
+      }
+    </style>
+  </head>
+  <body class="antialiased">
+    <div class="container mx-auto max-w-4xl px-4 py-8 md:py-12">
+      <!-- Header Section -->
+      <header
+        class="flex flex-col md:flex-row items-center justify-between mb-12 md:mb-16"
+      >
+        <div class="flex items-center mb-6 md:mb-0">
+          <div class="mr-6">
+            <div
+              class="w-24 h-24 rounded-full bg-slate-800 flex items-center justify-center ring-4 ring-slate-700/50"
+            >
+              <i class="fas fa-user-astronaut text-5xl text-sky-400"></i>
+            </div>
+          </div>
+          <div>
+            <h1 class="text-3xl md:text-4xl font-bold text-slate-100">
+              Abdulrahman Daney
+            </h1>
+            <p class="text-lg text-sky-400 fira-code">
+              Software Engineering Student
+            </p>
+            <div class="mt-3 flex items-center text-sm text-slate-400">
+              <div class="flex items-center">
+                <i class="fa-solid fa-location-dot mr-2"></i>
+                <span>Johor, Malaysia</span>
+              </div>
+              <span class="mx-2">|</span>
+              <div id="live-clock" class="flex items-center fira-code">
+                <i class="fa-regular fa-clock mr-2"></i>
+                <span id="clock-time"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex space-x-4">
+          <a
+            href="https://github.com/abdulrahman-daney"
+            target="_blank"
+            class="text-slate-400 hover:text-sky-400 transition-colors duration-300"
+            ><i class="fab fa-github fa-2x"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/abdulrahman-daney-3bb663234/"
+            target="_blank"
+            class="text-slate-400 hover:text-sky-400 transition-colors duration-300"
+            ><i class="fab fa-linkedin fa-2x"></i
+          ></a>
+          <a
+            href="mailto:abood053111@gmail.com"
+            class="text-slate-400 hover:text-sky-400 transition-colors duration-300"
+            ><i class="fas fa-envelope fa-2x"></i
+          ></a>
+        </div>
+      </header>
+
+      <!-- About Me Section -->
+      <section class="mb-12 md:mb-16">
+        <h2
+          class="text-2xl font-bold text-slate-200 mb-4 fira-code flex items-center"
+        >
+          <i class="fa-solid fa-code mr-3 text-sky-400"></i>About Me
+        </h2>
+        <div
+          class="bg-slate-900/70 border border-slate-800 rounded-lg p-6 text-base md:text-lg leading-relaxed"
+        >
+          <p>
+            I’m a passionate
+            <span class="text-sky-300 font-medium">full-stack developer</span>
+            with experience in modern web technologies such as
+            <span class="fira-code text-amber-300">Vue.js</span>,
+            <span class="fira-code text-green-300">Node.js</span>,
+            <span class="fira-code text-lime-300">Spring MVC</span>, and
+            <span class="fira-code text-blue-300">Docker</span>. I enjoy
+            building scalable applications and solving real-world problems
+            through clean, maintainable code. Currently pursuing my Software
+            Engineering degree at Universiti Teknologi Malaysia.
+          </p>
+        </div>
+      </section>
+
+      <!-- Featured Projects Section -->
+      <section class="mb-12 md:mb-16">
+        <h2
+          class="text-2xl font-bold text-slate-200 mb-6 fira-code flex items-center"
+        >
+          <i class="fa-solid fa-star-of-life mr-3 text-sky-400"></i>Featured
+          Projects
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Project Card 1 -->
+          <a
+            href="https://github.com/Abdulrahman-Daney/utm-drive-resource-manager.git"
+            target="_blank"
+            class="card-link bg-slate-900/70 border border-slate-800 rounded-lg p-6"
+          >
+            <div class="flex justify-between items-start">
+              <h3 class="font-bold text-slate-100 text-lg mb-2">
+                Google Drive Resource Sharing System
+              </h3>
+              <i
+                class="fa-solid fa-arrow-up-right-from-square text-slate-500 external-link-icon"
+              ></i>
+            </div>
+            <p class="text-sm mb-4">
+              SPA for academic file organization and access control.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="bg-sky-900/50 text-sky-300 text-xs font-medium px-2.5 py-1 rounded-full fira-code"
+                >Vue.js</span
+              >
+              <span
+                class="bg-green-900/50 text-green-300 text-xs font-medium px-2.5 py-1 rounded-full fira-code"
+                >Node.js</span
+              >
+              <span
+                class="bg-blue-900/50 text-blue-300 text-xs font-medium px-2.5 py-1 rounded-full fira-code"
+                >Docker</span
+              >
+            </div>
+          </a>
+
+          <!-- Project Card 3 -->
+          <a
+            href="https://github.com/student-marks-system/student-marks-system.git"
+            target="_blank"
+            class="card-link bg-slate-900/70 border border-slate-800 rounded-lg p-6"
+          >
+            <div class="flex justify-between items-start">
+              <h3 class="font-bold text-slate-100 text-lg mb-2">
+                Course Mark Management System
+              </h3>
+              <i
+                class="fa-solid fa-arrow-up-right-from-square text-slate-500 external-link-icon"
+              ></i>
+            </div>
+            <p class="text-sm mb-4">
+              Multi-role web app for academic mark management with analytics and
+              performance tracking. (Semester 2025)
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="bg-sky-900/50 text-sky-300 text-xs font-medium px-2.5 py-1 rounded-full fira-code"
+                >Vue.js</span
+              >
+              <span
+                class="bg-indigo-900/50 text-indigo-300 text-xs font-medium px-2.5 py-1 rounded-full fira-code"
+                >PHP Slim</span
+              >
+              <span
+                class="bg-teal-900/50 text-teal-300 text-xs font-medium px-2.5 py-1 rounded-full fira-code"
+                >MySQL</span
+              >
+              <span
+                class="bg-purple-900/50 text-purple-300 text-xs font-medium px-2.5 py-1 rounded-full fira-code"
+                >REST API</span
+              >
+            </div>
+          </a>
+          <!-- NEW Project Card 4 -->
+          <a
+            href="https://github.com/Abdulrahman-Daney/Person-BMI-Web-Application.git"
+            target="_blank"
+            class="card-link bg-slate-900/70 border border-slate-800 rounded-lg p-6"
+          >
+            <div class="flex justify-between items-start">
+              <h3 class="font-bold text-slate-100 text-lg mb-2">
+                BMI Calculator App – Flutter
+              </h3>
+              <i
+                class="fa-solid fa-arrow-up-right-from-square text-slate-500 external-link-icon"
+              ></i>
+            </div>
+            <p class="text-sm mb-4">
+              A fully functional Body Mass Index (BMI) Calculator built with
+              Flutter, featuring a clean UI and custom widgets for input.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="bg-cyan-900/50 text-cyan-300 text-xs font-medium px-2.5 py-1 rounded-full fira-code"
+                >Flutter</span
+              >
+              <span
+                class="bg-sky-900/50 text-sky-300 text-xs font-medium px-2.5 py-1 rounded-full fira-code"
+                >Dart</span
+              >
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- Skills & Experience Section -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <!-- Skills -->
+        <section>
+          <h2
+            class="text-2xl font-bold text-slate-200 mb-6 fira-code flex items-center"
+          >
+            <i class="fa-solid fa-lightbulb mr-3 text-sky-400"></i>Skills
+          </h2>
+          <div class="space-y-6">
+            <div>
+              <h3 class="font-semibold text-slate-300 mb-3">Languages</h3>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="bg-slate-800 text-slate-300 text-sm font-medium px-3 py-1 rounded-md fira-code"
+                  >Java</span
+                >
+                <span
+                  class="bg-slate-800 text-slate-300 text-sm font-medium px-3 py-1 rounded-md fira-code"
+                  >C++</span
+                >
+                <span
+                  class="bg-slate-800 text-slate-300 text-sm font-medium px-3 py-1 rounded-md fira-code"
+                  >JavaScript</span
+                >
+                <span
+                  class="bg-slate-800 text-slate-300 text-sm font-medium px-3 py-1 rounded-md fira-code"
+                  >PHP</span
+                >
+                <span
+                  class="bg-slate-800 text-slate-300 text-sm font-medium px-3 py-1 rounded-md fira-code"
+                  >Perl</span
+                >
+              </div>
+            </div>
+            <div>
+              <h3 class="font-semibold text-slate-300 mb-3">
+                Frameworks & Libraries
+              </h3>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="bg-slate-800 text-slate-300 text-sm font-medium px-3 py-1 rounded-md fira-code"
+                  >Spring MVC</span
+                >
+                <span
+                  class="bg-slate-800 text-slate-300 text-sm font-medium px-3 py-1 rounded-md fira-code"
+                  >Vue.js</span
+                >
+                <span
+                  class="bg-slate-800 text-slate-300 text-sm font-medium px-3 py-1 rounded-md fira-code"
+                  >Node.js</span
+                >
+                <span
+                  class="bg-slate-800 text-slate-300 text-sm font-medium px-3 py-1 rounded-md fira-code"
+                  >Mojolicious</span
+                >
+              </div>
+            </div>
+            <div>
+              <h3 class="font-semibold text-slate-300 mb-3">
+                Databases & Tools
+              </h3>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="bg-slate-800 text-slate-300 text-sm font-medium px-3 py-1 rounded-md fira-code"
+                  >MySQL</span
+                >
+                <span
+                  class="bg-slate-800 text-slate-300 text-sm font-medium px-3 py-1 rounded-md fira-code"
+                  >MariaDB</span
+                >
+                <span
+                  class="bg-slate-800 text-slate-300 text-sm font-medium px-3 py-1 rounded-md fira-code"
+                  >MongoDB</span
+                >
+                <span
+                  class="bg-slate-800 text-slate-300 text-sm font-medium px-3 py-1 rounded-md fira-code"
+                  >Git & GitHub</span
+                >
+                <span
+                  class="bg-slate-800 text-slate-300 text-sm font-medium px-3 py-1 rounded-md fira-code"
+                  >Docker</span
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Experience -->
+        <section>
+          <h2
+            class="text-2xl font-bold text-slate-200 mb-6 fira-code flex items-center"
+          >
+            <i class="fa-solid fa-briefcase mr-3 text-sky-400"></i>Experience
+          </h2>
+          <div class="space-y-6 border-l-2 border-slate-800 pl-6">
+            <div class="relative">
+              <div
+                class="absolute -left-[34px] top-1.5 w-4 h-4 bg-sky-400 rounded-full ring-4 ring-sky-400/20"
+              ></div>
+              <p class="fira-code text-sky-400 text-sm">2024 – Present</p>
+              <h3 class="font-bold text-slate-200 mt-1">
+                Full-Stack Developer
+              </h3>
+              <p class="text-sm mt-1">
+                Developing educational tech and student performance platforms
+                using Spring, Vue, and Node.js.
+              </p>
+            </div>
+            <div class="relative">
+              <div
+                class="absolute -left-[34px] top-1.5 w-4 h-4 bg-slate-700 rounded-full"
+              ></div>
+              <p class="fira-code text-slate-400 text-sm">2023 – 2024</p>
+              <h3 class="font-bold text-slate-200 mt-1">Web Developer</h3>
+              <p class="text-sm mt-1">
+                Created responsive web applications and dashboards using HTML,
+                CSS, and PHP. Contributed to system architecture and design.
+              </p>
+            </div>
+          </div>
+        </section>
       </div>
-    </header>
 
-    <section class="section">
-      <h2 class="section-title">About Me</h2>
-      <p>
-        I’m a passionate full-stack developer with experience in modern web technologies such as Vue.js, Node.js, Spring MVC, and Docker. I enjoy building scalable applications and solving real-world problems through clean, maintainable code. Currently pursuing my Software Engineering degree at Universiti Teknologi Malaysia.
-      </p>
-    </section>
-
-    <section class="section">
-      <h2 class="section-title">Featured Projects</h2>
-      <div class="project-card">
-        <h3 class="project-title">Google Drive Resource Sharing Management System</h3>
-        <p class="project-description">
-          SPA for academic file organization and access control. Used Vue.js, Node.js, and MariaDB with Docker containerization.
+      <!-- Footer -->
+      <footer class="text-center mt-16 text-sm text-slate-500">
+        <p>
+          &copy; <span id="current-year"></span> Abdulrahman Daney. All Rights
+          Reserved.
         </p>
-      </div>
-      <div class="project-card">
-        <h3 class="project-title">TVPSS Management System</h3>
-        <p class="project-description">
-          Content and crew management system for school media. Developed using Spring MVC, Thymeleaf, and YouTube API.
+        <p class="mt-1">
+          Last updated: <span id="last-updated" class="fira-code"></span>
         </p>
-      </div>
-      <div class="project-card">
-        <h3 class="project-title">Food Save Website</h3>
-        <p class="project-description">
-          Donation platform built using PHP and MySQL for food-sharing and community outreach.
-        </p>
-      </div>
-    </section>
+      </footer>
+    </div>
 
-    <section class="section">
-      <h2 class="section-title">Skills</h2>
-      <div class="skill-category">
-        <h3>Languages</h3>
-        <div class="skill-list">
-          <span class="skill-item">Java</span><span class="skill-item">C++</span><span class="skill-item">JavaScript</span><span class="skill-item">PHP</span><span class="skill-item">Perl</span>
-        </div>
-      </div>
-      <div class="skill-category">
-        <h3>Frameworks & Libraries</h3>
-        <div class="skill-list">
-          <span class="skill-item">Spring MVC</span><span class="skill-item">Vue.js</span><span class="skill-item">Node.js</span><span class="skill-item">Mojolicious</span>
-        </div>
-      </div>
-      <div class="skill-category">
-        <h3>Databases</h3>
-        <div class="skill-list">
-          <span class="skill-item">MySQL</span><span class="skill-item">MongoDB</span><span class="skill-item">MariaDB</span>
-        </div>
-      </div>
-      <div class="skill-category">
-        <h3>Tools</h3>
-        <div class="skill-list">
-          <span class="skill-item">Git & GitHub</span><span class="skill-item">Docker</span><span class="skill-item">Tomcat</span><span class="skill-item">VS Code</span>
-        </div>
-      </div>
-    </section>
+    <script>
+      // Live Clock and Dynamic Year/Date
+      function updateClock() {
+        const clockTimeEl = document.getElementById("clock-time");
+        if (clockTimeEl) {
+          const now = new Date();
+          const options = {
+            timeZone: "Asia/Kuala_Lumpur",
+            hour: "2-digit",
+            minute: "2-digit",
+            second: "2-digit",
+            hour12: true,
+          };
+          clockTimeEl.textContent =
+            now.toLocaleTimeString("en-US", options) + " (GMT+8)";
+        }
+      }
 
-    <section class="section">
-      <h2 class="section-title">Experience</h2>
-      <div class="timeline-item">
-        <h3>Full-Stack Developer (2024 – Present)</h3>
-        <p>Developing educational tech and student performance platforms using Spring, Vue, and Node.js.</p>
-      </div>
-      <div class="timeline-item">
-        <h3>Web Developer (2023 – 2024)</h3>
-        <p>Created responsive web applications and dashboards using HTML, CSS, and PHP. Contributed to system architecture and design.</p>
-      </div>
-    </section>
+      const currentYearEl = document.getElementById("current-year");
+      if (currentYearEl) {
+        currentYearEl.textContent = new Date().getFullYear();
+      }
 
-    <footer class="footer">
-      <p>&copy; 2025 Abdulrahman Daney | Software Engineer</p>
-      <div class="social-links">
-        <a href="https://github.com/abdulrahman-daney" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/abdulrahman-daney" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a>
-        <a href="mailto:abood053111@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
-      </div>
-    </footer>
-  </div>
-</body>
+      const lastUpdatedEl = document.getElementById("last-updated");
+      if (lastUpdatedEl) {
+        // Updated date to reflect new changes
+        lastUpdatedEl.textContent = new Date(
+          "2025-06-27T18:12:00+08:00"
+        ).toLocaleString("en-US", {
+          month: "long",
+          day: "numeric",
+          year: "numeric",
+        });
+      }
+
+      setInterval(updateClock, 1000);
+      updateClock(); // initial call
+    </script>
+  </body>
 </html>
