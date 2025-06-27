@@ -4,633 +4,319 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Abdulrahman Daney | Software Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
     <style>
-      /* Reset and Base Styles */
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
       body {
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
-          sans-serif;
+        font-family: "Inter", sans-serif;
         background-color: #0a0a0a;
         color: #a1a1aa;
-        line-height: 1.6;
-        antialiased: true;
       }
-
       .fira-code {
-        font-family: "SF Mono", "Monaco", "Inconsolata", "Roboto Mono",
-          "Courier New", monospace;
+        font-family: "Fira Code", monospace;
       }
-
-      /* Container */
-      .container {
-        max-width: 1024px;
-        margin: 0 auto;
-        padding: 2rem 1rem;
-      }
-
-      /* Header Section */
-      .header {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 4rem;
-      }
-
-      @media (min-width: 768px) {
-        .header {
-          flex-direction: row;
-          margin-bottom: 4rem;
-        }
-      }
-
-      .profile-section {
-        display: flex;
-        align-items: center;
-        margin-bottom: 1.5rem;
-      }
-
-      @media (min-width: 768px) {
-        .profile-section {
-          margin-bottom: 0;
-        }
-      }
-
-      .avatar {
-        width: 96px;
-        height: 96px;
-        border-radius: 50%;
-        background-color: #1e293b;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-right: 1.5rem;
-        border: 4px solid rgba(71, 85, 105, 0.5);
-      }
-
-      .avatar::before {
-        content: "🚀";
-        font-size: 3rem;
-      }
-
-      .profile-info h1 {
-        font-size: 2rem;
-        font-weight: 700;
-        color: #f1f5f9;
-        margin-bottom: 0.5rem;
-      }
-
-      @media (min-width: 768px) {
-        .profile-info h1 {
-          font-size: 2.25rem;
-        }
-      }
-
-      .profile-subtitle {
-        font-size: 1.125rem;
-        color: #38bdf8;
-        margin-bottom: 0.75rem;
-      }
-
-      .profile-meta {
-        display: flex;
-        align-items: center;
-        font-size: 0.875rem;
-        color: #94a3b8;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-      }
-
-      .profile-meta span {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-      }
-
-      .profile-meta span::before {
-        content: "📍";
-      }
-
-      .profile-meta span:last-child::before {
-        content: "🕐";
-      }
-
-      /* Social Links */
-      .social-links {
-        display: flex;
-        gap: 1rem;
-      }
-
-      .social-link {
-        color: #94a3b8;
-        text-decoration: none;
-        font-size: 1.5rem;
-        transition: color 0.3s ease;
-      }
-
-      .social-link:hover {
-        color: #38bdf8;
-      }
-
-      .social-link.github::before {
-        content: "📱";
-      }
-      .social-link.linkedin::before {
-        content: "💼";
-      }
-      .social-link.email::before {
-        content: "📧";
-      }
-
-      /* Sections */
-      .section {
-        margin-bottom: 4rem;
-      }
-
-      .section-title {
-        font-size: 1.5rem;
-        font-weight: 700;
-        color: #e2e8f0;
-        margin-bottom: 1.5rem;
-        display: flex;
-        align-items: center;
-        gap: 0.75rem;
-      }
-
-      .section-title.about::before {
-        content: "💻";
-      }
-      .section-title.projects::before {
-        content: "⭐";
-      }
-      .section-title.skills::before {
-        content: "💡";
-      }
-      .section-title.experience::before {
-        content: "💼";
-      }
-
-      /* About Section */
-      .about-content {
-        background-color: rgba(15, 23, 42, 0.7);
-        border: 1px solid #334155;
-        border-radius: 0.5rem;
-        padding: 1.5rem;
-        font-size: 1.125rem;
-        line-height: 1.7;
-      }
-
-      .highlight {
-        color: #7dd3fc;
-        font-weight: 500;
-      }
-
-      .tech-highlight {
-        color: #fbbf24;
-        font-family: "SF Mono", "Monaco", "Inconsolata", "Roboto Mono",
-          monospace;
-      }
-
-      .tech-highlight.green {
-        color: #4ade80;
-      }
-      .tech-highlight.lime {
-        color: #a3e635;
-      }
-      .tech-highlight.blue {
-        color: #60a5fa;
-      }
-
-      /* Projects Grid */
-      .projects-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-      }
-
-      @media (min-width: 768px) {
-        .projects-grid {
-          grid-template-columns: repeat(2, 1fr);
-        }
-      }
-
-      .project-card {
-        background-color: rgba(15, 23, 42, 0.7);
-        border: 1px solid #334155;
-        border-radius: 0.5rem;
-        padding: 1.5rem;
+      .card-link {
+        display: block;
         text-decoration: none;
         color: inherit;
-        transition: all 0.3s ease;
-        position: relative;
-        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
       }
-
-      .project-card:hover {
+      .card-link:hover {
         transform: translateY(-5px);
-        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
-          0 8px 10px -6px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+          0 8px 10px -6px rgb(0 0 0 / 0.1);
       }
-
-      .project-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        margin-bottom: 0.5rem;
-      }
-
-      .project-title {
-        font-size: 1.125rem;
-        font-weight: 700;
-        color: #f1f5f9;
-      }
-
-      .external-icon {
-        color: #64748b;
+      .card-link .external-link-icon {
         transition: color 0.3s ease;
       }
-
-      .external-icon::before {
-        content: "↗️";
-        font-size: 0.875rem;
-      }
-
-      .project-card:hover .external-icon {
+      .card-link:hover .external-link-icon {
         color: #38bdf8;
-      }
-
-      .project-description {
-        font-size: 0.875rem;
-        margin-bottom: 1rem;
-        line-height: 1.5;
-      }
-
-      .tech-tags {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-      }
-
-      .tech-tag {
-        font-size: 0.75rem;
-        font-weight: 500;
-        padding: 0.25rem 0.625rem;
-        border-radius: 9999px;
-        font-family: "SF Mono", "Monaco", "Inconsolata", "Roboto Mono",
-          monospace;
-      }
-
-      .tech-tag.vue {
-        background-color: rgba(14, 116, 144, 0.5);
-        color: #7dd3fc;
-      }
-
-      .tech-tag.node {
-        background-color: rgba(20, 83, 45, 0.5);
-        color: #4ade80;
-      }
-
-      .tech-tag.docker {
-        background-color: rgba(30, 58, 138, 0.5);
-        color: #60a5fa;
-      }
-
-      .tech-tag.php {
-        background-color: rgba(67, 56, 202, 0.5);
-        color: #a78bfa;
-      }
-
-      .tech-tag.mysql {
-        background-color: rgba(20, 184, 166, 0.5);
-        color: #2dd4bf;
-      }
-
-      .tech-tag.flutter {
-        background-color: rgba(8, 145, 178, 0.5);
-        color: #22d3ee;
-      }
-
-      .tech-tag.rest {
-        background-color: rgba(147, 51, 234, 0.5);
-        color: #c084fc;
-      }
-
-      /* Skills and Experience Grid */
-      .skills-experience-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 3rem;
-      }
-
-      @media (min-width: 768px) {
-        .skills-experience-grid {
-          grid-template-columns: repeat(2, 1fr);
-        }
-      }
-
-      /* Skills */
-      .skills-container {
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
-      }
-
-      .skill-category h3 {
-        font-size: 1rem;
-        font-weight: 600;
-        color: #cbd5e1;
-        margin-bottom: 0.75rem;
-      }
-
-      .skill-tags {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-      }
-
-      .skill-tag {
-        background-color: #1e293b;
-        color: #cbd5e1;
-        font-size: 0.875rem;
-        font-weight: 500;
-        padding: 0.25rem 0.75rem;
-        border-radius: 0.375rem;
-        font-family: "SF Mono", "Monaco", "Inconsolata", "Roboto Mono",
-          monospace;
-      }
-
-      /* Experience Timeline */
-      .timeline {
-        position: relative;
-        padding-left: 1.5rem;
-        border-left: 2px solid #334155;
-      }
-
-      .timeline-item {
-        position: relative;
-        margin-bottom: 1.5rem;
-      }
-
-      .timeline-item::before {
-        content: "";
-        position: absolute;
-        left: -34px;
-        top: 6px;
-        width: 16px;
-        height: 16px;
-        border-radius: 50%;
-        background-color: #38bdf8;
-      }
-
-      .timeline-item:last-child::before {
-        background-color: #64748b;
-      }
-
-      .timeline-item.current::before {
-        box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.2);
-      }
-
-      .timeline-date {
-        font-size: 0.875rem;
-        color: #38bdf8;
-        font-family: "SF Mono", "Monaco", "Inconsolata", "Roboto Mono",
-          monospace;
-      }
-
-      .timeline-date.past {
-        color: #94a3b8;
-      }
-
-      .timeline-title {
-        font-size: 1rem;
-        font-weight: 700;
-        color: #e2e8f0;
-        margin: 0.25rem 0;
-      }
-
-      .timeline-description {
-        font-size: 0.875rem;
-        line-height: 1.5;
-      }
-
-      /* Footer */
-      .footer {
-        text-align: center;
-        margin-top: 4rem;
-        font-size: 0.875rem;
-        color: #64748b;
-      }
-
-      .footer p {
-        margin-bottom: 0.25rem;
-      }
-
-      /* Animations */
-      @keyframes fadeInUp {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      .animate-in {
-        animation: fadeInUp 0.6s ease-out;
-      }
-
-      /* Responsive adjustments */
-      @media (max-width: 767px) {
-        .container {
-          padding: 1rem;
-        }
-
-        .header {
-          text-align: center;
-        }
-
-        .profile-section {
-          flex-direction: column;
-          text-align: center;
-        }
-
-        .avatar {
-          margin-right: 0;
-          margin-bottom: 1rem;
-        }
-
-        .profile-meta {
-          justify-content: center;
-        }
       }
     </style>
   </head>
-  <body>
-    <div class="container">
+  <body class="antialiased">
+    <div class="container mx-auto max-w-4xl px-4 py-8 md:py-12">
       <!-- Header Section -->
-      <header class="header animate-in">
-        <div class="profile-section">
-          <div class="avatar"></div>
-          <div class="profile-info">
-            <h1>Abdulrahman Daney</h1>
-            <p class="profile-subtitle fira-code">
+      <header
+        class="flex flex-col md:flex-row items-center justify-between mb-12 md:mb-16"
+      >
+        <div class="flex items-center mb-6 md:mb-0">
+          <div class="mr-6">
+            <div
+              class="w-24 h-24 rounded-full bg-slate-800 flex items-center justify-center ring-4 ring-slate-700/50"
+            >
+              <i class="fas fa-user-astronaut text-5xl text-sky-400"></i>
+            </div>
+          </div>
+          <div>
+            <h1 class="text-3xl md:text-4xl font-bold text-slate-100">
+              Abdulrahman Daney
+            </h1>
+            <p class="text-lg text-sky-400 fira-code">
               Software Engineering Student
             </p>
-            <div class="profile-meta">
-              <span>Johor, Malaysia</span>
-              <span class="fira-code" id="live-clock"></span>
+            <div class="mt-3 flex items-center text-sm text-slate-400">
+              <div class="flex items-center">
+                <i class="fa-solid fa-location-dot mr-2"></i>
+                <span>Johor, Malaysia</span>
+              </div>
+              <span class="mx-2">|</span>
+              <div id="live-clock" class="flex items-center fira-code">
+                <i class="fa-regular fa-clock mr-2"></i>
+                <span id="clock-time"></span>
+              </div>
             </div>
           </div>
         </div>
-        <div class="social-links">
+        <div class="flex space-x-4">
           <a
             href="https://github.com/abdulrahman-daney"
             target="_blank"
-            class="social-link github"
-            title="GitHub"
+            class="text-slate-400 hover:text-sky-400 transition-colors duration-300"
+            ><i class="fab fa-github fa-2x"></i
           ></a>
           <a
             href="https://www.linkedin.com/in/abdulrahman-daney-3bb663234/"
             target="_blank"
-            class="social-link linkedin"
-            title="LinkedIn"
+            class="text-slate-400 hover:text-sky-400 transition-colors duration-300"
+            ><i class="fab fa-linkedin fa-2x"></i
           ></a>
           <a
             href="mailto:abood053111@gmail.com"
-            class="social-link email"
-            title="Email"
+            class="text-slate-400 hover:text-sky-400 transition-colors duration-300"
+            ><i class="fas fa-envelope fa-2x"></i
           ></a>
         </div>
       </header>
 
       <!-- About Me Section -->
-      <section class="section animate-in">
-        <h2 class="section-title about fira-code">About Me</h2>
-        <div class="about-content">
+      <section class="mb-12 md:mb-16">
+        <h2
+          class="text-2xl font-bold text-slate-200 mb-4 fira-code flex items-center"
+        >
+          <i class="fa-solid fa-code mr-3 text-sky-400"></i>About Me
+        </h2>
+        <div
+          class="bg-slate-900/70 border border-slate-800 rounded-lg p-6 text-base md:text-lg leading-relaxed"
+        >
           <p>
-            I'm a passionate <span class="highlight">full-stack developer</span>
+            I’m a passionate
+            <span class="text-sky-300 font-medium">full-stack developer</span>
             with experience in modern web technologies such as
-            <span class="tech-highlight">Vue.js</span>,
-            <span class="tech-highlight green">Node.js</span>,
-            <span class="tech-highlight lime">Spring MVC</span>, and
-            <span class="tech-highlight blue">Docker</span>. I enjoy building
-            scalable applications and solving real-world problems through clean,
-            maintainable code. Currently pursuing my Software Engineering degree
-            at Universiti Teknologi Malaysia.
+            <span class="fira-code text-amber-300">Vue.js</span>,
+            <span class="fira-code text-green-300">Node.js</span>,
+            <span class="fira-code text-lime-300">Spring MVC</span>, and
+            <span class="fira-code text-blue-300">Docker</span>. I enjoy
+            building scalable applications and solving real-world problems
+            through clean, maintainable code. Currently pursuing my Software
+            Engineering degree at Universiti Teknologi Malaysia.
           </p>
         </div>
       </section>
 
       <!-- Featured Projects Section -->
-      <section class="section animate-in">
-        <h2 class="section-title projects fira-code">Featured Projects</h2>
-        <div class="projects-grid">
+      <section class="mb-12 md:mb-16">
+        <h2
+          class="text-2xl font-bold text-slate-200 mb-6 fira-code flex items-center"
+        >
+          <i class="fa-solid fa-star-of-life mr-3 text-sky-400"></i>Featured
+          Projects
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <!-- Project Card 1 -->
           <a
             href="https://github.com/Abdulrahman-Daney/utm-drive-resource-manager.git"
             target="_blank"
-            class="project-card"
+            class="card-link bg-slate-900/70 border border-slate-800 rounded-lg p-6"
           >
-            <div class="project-header">
-              <h3 class="project-title">
+            <div class="flex justify-between items-start">
+              <h3 class="font-bold text-slate-100 text-lg mb-2">
                 Google Drive Resource Sharing System
               </h3>
-              <span class="external-icon"></span>
+              <i
+                class="fa-solid fa-arrow-up-right-from-square text-slate-500 external-link-icon"
+              ></i>
             </div>
-            <p class="project-description">
+            <p class="text-sm mb-4">
               SPA for academic file organization and access control.
             </p>
-            <div class="tech-tags">
-              <span class="tech-tag vue">Vue.js</span>
-              <span class="tech-tag node">Node.js</span>
-              <span class="tech-tag docker">Docker</span>
-            </div>
-          </a>
-
-          <!-- Project Card 2 -->
-          <a
-            href="https://github.com/student-marks-system/student-marks-system.git"
-            target="_blank"
-            class="project-card"
-          >
-            <div class="project-header">
-              <h3 class="project-title">Course Mark Management System</h3>
-              <span class="external-icon"></span>
-            </div>
-            <p class="project-description">
-              Multi-role web app for academic mark management with analytics and
-              performance tracking. (Semester 2025)
-            </p>
-            <div class="tech-tags">
-              <span class="tech-tag vue">Vue.js</span>
-              <span class="tech-tag php">PHP Slim</span>
-              <span class="tech-tag mysql">MySQL</span>
-              <span class="tech-tag rest">REST API</span>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="bg-sky-900/50 text-sky-300 text-xs font-medium px-2.5 py-1 rounded-full fira-code"
+                >Vue.js</span
+              >
+              <span
+                class="bg-green-900/50 text-green-300 text-xs font-medium px-2.5 py-1 rounded-full fira-code"
+                >Node.js</span
+              >
+              <span
+                class="bg-blue-900/50 text-blue-300 text-xs font-medium px-2.5 py-1 rounded-full fira-code"
+                >Docker</span
+              >
             </div>
           </a>
 
           <!-- Project Card 3 -->
           <a
+            href="https://github.com/student-marks-system/student-marks-system.git"
+            target="_blank"
+            class="card-link bg-slate-900/70 border border-slate-800 rounded-lg p-6"
+          >
+            <div class="flex justify-between items-start">
+              <h3 class="font-bold text-slate-100 text-lg mb-2">
+                Course Mark Management System
+              </h3>
+              <i
+                class="fa-solid fa-arrow-up-right-from-square text-slate-500 external-link-icon"
+              ></i>
+            </div>
+            <p class="text-sm mb-4">
+              Multi-role web app for academic mark management with analytics and
+              performance tracking. (Semester 2025)
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="bg-sky-900/50 text-sky-300 text-xs font-medium px-2.5 py-1 rounded-full fira-code"
+                >Vue.js</span
+              >
+              <span
+                class="bg-indigo-900/50 text-indigo-300 text-xs font-medium px-2.5 py-1 rounded-full fira-code"
+                >PHP Slim</span
+              >
+              <span
+                class="bg-teal-900/50 text-teal-300 text-xs font-medium px-2.5 py-1 rounded-full fira-code"
+                >MySQL</span
+              >
+              <span
+                class="bg-purple-900/50 text-purple-300 text-xs font-medium px-2.5 py-1 rounded-full fira-code"
+                >REST API</span
+              >
+            </div>
+          </a>
+          <!-- NEW Project Card 4 -->
+          <a
             href="https://github.com/Abdulrahman-Daney/Person-BMI-Web-Application.git"
             target="_blank"
-            class="project-card"
+            class="card-link bg-slate-900/70 border border-slate-800 rounded-lg p-6"
           >
-            <div class="project-header">
-              <h3 class="project-title">BMI Calculator App – Flutter</h3>
-              <span class="external-icon"></span>
+            <div class="flex justify-between items-start">
+              <h3 class="font-bold text-slate-100 text-lg mb-2">
+                BMI Calculator App – Flutter
+              </h3>
+              <i
+                class="fa-solid fa-arrow-up-right-from-square text-slate-500 external-link-icon"
+              ></i>
             </div>
-            <p class="project-description">
+            <p class="text-sm mb-4">
               A fully functional Body Mass Index (BMI) Calculator built with
               Flutter, featuring a clean UI and custom widgets for input.
             </p>
-            <div class="tech-tags">
-              <span class="tech-tag flutter">Flutter</span>
-              <span class="tech-tag vue">Dart</span>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="bg-cyan-900/50 text-cyan-300 text-xs font-medium px-2.5 py-1 rounded-full fira-code"
+                >Flutter</span
+              >
+              <span
+                class="bg-sky-900/50 text-sky-300 text-xs font-medium px-2.5 py-1 rounded-full fira-code"
+                >Dart</span
+              >
             </div>
           </a>
         </div>
       </section>
 
       <!-- Skills & Experience Section -->
-      <div class="skills-experience-grid animate-in">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
         <!-- Skills -->
         <section>
-          <h2 class="section-title skills fira-code">Skills</h2>
-          <div class="skills-container">
-            <div class="skill-category">
-              <h3>Languages</h3>
-              <div class="skill-tags">
-                <span class="skill-tag">Java</span>
-                <span class="skill-tag">C++</span>
-                <span class="skill-tag">JavaScript</span>
-                <span class="skill-tag">PHP</span>
-                <span class="skill-tag">Perl</span>
+          <h2
+            class="text-2xl font-bold text-slate-200 mb-6 fira-code flex items-center"
+          >
+            <i class="fa-solid fa-lightbulb mr-3 text-sky-400"></i>Skills
+          </h2>
+          <div class="space-y-6">
+            <div>
+              <h3 class="font-semibold text-slate-300 mb-3">Languages</h3>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="bg-slate-800 text-slate-300 text-sm font-medium px-3 py-1 rounded-md fira-code"
+                  >Java</span
+                >
+                <span
+                  class="bg-slate-800 text-slate-300 text-sm font-medium px-3 py-1 rounded-md fira-code"
+                  >C++</span
+                >
+                <span
+                  class="bg-slate-800 text-slate-300 text-sm font-medium px-3 py-1 rounded-md fira-code"
+                  >JavaScript</span
+                >
+                <span
+                  class="bg-slate-800 text-slate-300 text-sm font-medium px-3 py-1 rounded-md fira-code"
+                  >PHP</span
+                >
+                <span
+                  class="bg-slate-800 text-slate-300 text-sm font-medium px-3 py-1 rounded-md fira-code"
+                  >Perl</span
+                >
               </div>
             </div>
-            <div class="skill-category">
-              <h3>Frameworks & Libraries</h3>
-              <div class="skill-tags">
-                <span class="skill-tag">Spring MVC</span>
-                <span class="skill-tag">Vue.js</span>
-                <span class="skill-tag">Node.js</span>
-                <span class="skill-tag">Mojolicious</span>
+            <div>
+              <h3 class="font-semibold text-slate-300 mb-3">
+                Frameworks & Libraries
+              </h3>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="bg-slate-800 text-slate-300 text-sm font-medium px-3 py-1 rounded-md fira-code"
+                  >Spring MVC</span
+                >
+                <span
+                  class="bg-slate-800 text-slate-300 text-sm font-medium px-3 py-1 rounded-md fira-code"
+                  >Vue.js</span
+                >
+                <span
+                  class="bg-slate-800 text-slate-300 text-sm font-medium px-3 py-1 rounded-md fira-code"
+                  >Node.js</span
+                >
+                <span
+                  class="bg-slate-800 text-slate-300 text-sm font-medium px-3 py-1 rounded-md fira-code"
+                  >Mojolicious</span
+                >
               </div>
             </div>
-            <div class="skill-category">
-              <h3>Databases & Tools</h3>
-              <div class="skill-tags">
-                <span class="skill-tag">MySQL</span>
-                <span class="skill-tag">MariaDB</span>
-                <span class="skill-tag">MongoDB</span>
-                <span class="skill-tag">Git & GitHub</span>
-                <span class="skill-tag">Docker</span>
+            <div>
+              <h3 class="font-semibold text-slate-300 mb-3">
+                Databases & Tools
+              </h3>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="bg-slate-800 text-slate-300 text-sm font-medium px-3 py-1 rounded-md fira-code"
+                  >MySQL</span
+                >
+                <span
+                  class="bg-slate-800 text-slate-300 text-sm font-medium px-3 py-1 rounded-md fira-code"
+                  >MariaDB</span
+                >
+                <span
+                  class="bg-slate-800 text-slate-300 text-sm font-medium px-3 py-1 rounded-md fira-code"
+                  >MongoDB</span
+                >
+                <span
+                  class="bg-slate-800 text-slate-300 text-sm font-medium px-3 py-1 rounded-md fira-code"
+                  >Git & GitHub</span
+                >
+                <span
+                  class="bg-slate-800 text-slate-300 text-sm font-medium px-3 py-1 rounded-md fira-code"
+                  >Docker</span
+                >
               </div>
             </div>
           </div>
@@ -638,20 +324,32 @@
 
         <!-- Experience -->
         <section>
-          <h2 class="section-title experience fira-code">Experience</h2>
-          <div class="timeline">
-            <div class="timeline-item current">
-              <p class="timeline-date fira-code">2024 – Present</p>
-              <h3 class="timeline-title">Full-Stack Developer</h3>
-              <p class="timeline-description">
+          <h2
+            class="text-2xl font-bold text-slate-200 mb-6 fira-code flex items-center"
+          >
+            <i class="fa-solid fa-briefcase mr-3 text-sky-400"></i>Experience
+          </h2>
+          <div class="space-y-6 border-l-2 border-slate-800 pl-6">
+            <div class="relative">
+              <div
+                class="absolute -left-[34px] top-1.5 w-4 h-4 bg-sky-400 rounded-full ring-4 ring-sky-400/20"
+              ></div>
+              <p class="fira-code text-sky-400 text-sm">2024 – Present</p>
+              <h3 class="font-bold text-slate-200 mt-1">
+                Full-Stack Developer
+              </h3>
+              <p class="text-sm mt-1">
                 Developing educational tech and student performance platforms
                 using Spring, Vue, and Node.js.
               </p>
             </div>
-            <div class="timeline-item">
-              <p class="timeline-date past fira-code">2023 – 2024</p>
-              <h3 class="timeline-title">Web Developer</h3>
-              <p class="timeline-description">
+            <div class="relative">
+              <div
+                class="absolute -left-[34px] top-1.5 w-4 h-4 bg-slate-700 rounded-full"
+              ></div>
+              <p class="fira-code text-slate-400 text-sm">2023 – 2024</p>
+              <h3 class="font-bold text-slate-200 mt-1">Web Developer</h3>
+              <p class="text-sm mt-1">
                 Created responsive web applications and dashboards using HTML,
                 CSS, and PHP. Contributed to system architecture and design.
               </p>
@@ -661,20 +359,22 @@
       </div>
 
       <!-- Footer -->
-      <footer class="footer">
+      <footer class="text-center mt-16 text-sm text-slate-500">
         <p>
           &copy; <span id="current-year"></span> Abdulrahman Daney. All Rights
           Reserved.
         </p>
-        <p>Last updated: <span id="last-updated" class="fira-code"></span></p>
+        <p class="mt-1">
+          Last updated: <span id="last-updated" class="fira-code"></span>
+        </p>
       </footer>
     </div>
 
     <script>
-      // Live Clock
+      // Live Clock and Dynamic Year/Date
       function updateClock() {
-        const clockEl = document.getElementById("live-clock");
-        if (clockEl) {
+        const clockTimeEl = document.getElementById("clock-time");
+        if (clockTimeEl) {
           const now = new Date();
           const options = {
             timeZone: "Asia/Kuala_Lumpur",
@@ -683,20 +383,19 @@
             second: "2-digit",
             hour12: true,
           };
-          clockEl.textContent =
+          clockTimeEl.textContent =
             now.toLocaleTimeString("en-US", options) + " (GMT+8)";
         }
       }
 
-      // Update current year
       const currentYearEl = document.getElementById("current-year");
       if (currentYearEl) {
         currentYearEl.textContent = new Date().getFullYear();
       }
 
-      // Set last updated date
       const lastUpdatedEl = document.getElementById("last-updated");
       if (lastUpdatedEl) {
+        // Updated date to reflect new changes
         lastUpdatedEl.textContent = new Date(
           "2025-06-27T18:12:00+08:00"
         ).toLocaleString("en-US", {
@@ -706,38 +405,8 @@
         });
       }
 
-      // Initialize clock
       setInterval(updateClock, 1000);
-      updateClock();
-
-      // Animate elements on scroll
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.style.opacity = "1";
-            entry.target.style.transform = "translateY(0)";
-          }
-        });
-      });
-
-      // Observe all sections for animation
-      document.querySelectorAll(".animate-in").forEach((el) => {
-        el.style.opacity = "0";
-        el.style.transform = "translateY(20px)";
-        el.style.transition = "opacity 0.6s ease, transform 0.6s ease";
-        observer.observe(el);
-      });
-
-      // Add smooth hover effects
-      document.querySelectorAll(".project-card").forEach((card) => {
-        card.addEventListener("mouseenter", function () {
-          this.style.borderColor = "#38bdf8";
-        });
-
-        card.addEventListener("mouseleave", function () {
-          this.style.borderColor = "#334155";
-        });
-      });
+      updateClock(); // initial call
     </script>
   </body>
 </html>
