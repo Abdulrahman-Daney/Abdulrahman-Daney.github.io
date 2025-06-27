@@ -1,182 +1,679 @@
 <!DOCTYPE html>
-
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Abdulrahman Daney</title>
-    <link rel="stylesheet" href="stylesheet.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Caveat:wght@400..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lobster&family=Sedan:ital@0;1&display=swap" rel="stylesheet">
-  </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full-Stack Developer Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  <body>
-    <!-- header -->
-    <header>
-      <h1>Welcome to my website</h1>
-      <img src="./logo.png" />
-    </header>
-    <h2 style="text-align: center; font-size: 50px; color: aliceblue;">Step into my world!</h2>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
 
-    <main>
-      
-      <section class="menu">
-        <div class="in_menu left_menu">
-          <a href="#resume">
-            <div class="item left_item">
-              <h2>Resume</h2>
-              <p>Explore my journey, skills, and achievements detailed</p>
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 60px;
+            color: white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .name {
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .title {
+            font-size: 1.3em;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #555;
+            font-size: 1.1em;
+        }
+
+        .contact-item i {
+            color: #667eea;
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .section-title {
+            font-size: 2em;
+            font-weight: 700;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            color: #333;
+        }
+
+        .section-title i {
+            color: #667eea;
+            font-size: 1.2em;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+        }
+
+        .project-card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-radius: 15px;
+            padding: 25px;
+            border-left: 5px solid #667eea;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(102, 126, 234, 0.3);
+        }
+
+        .project-date {
+            background: #667eea;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .project-title {
+            font-size: 1.4em;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .project-role {
+            color: #667eea;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 15px 0;
+        }
+
+        .tech-tag {
+            background: rgba(102, 126, 234, 0.1);
+            color: #667eea;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.9em;
+            font-weight: 500;
+            border: 1px solid rgba(102, 126, 234, 0.2);
+        }
+
+        .project-description {
+            color: #555;
+            line-height: 1.7;
+            margin-top: 15px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .skill-category {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            border-radius: 15px;
+            padding: 25px;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .skill-category:nth-child(even) {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+
+        .skill-category:nth-child(3n) {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            color: #333;
+        }
+
+        .skill-category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+
+        .skill-category h3 {
+            font-size: 1.3em;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-item {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 6px 12px;
+            border-radius: 12px;
+            font-size: 0.9em;
+            font-weight: 500;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, #667eea, #764ba2);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 40px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -23px;
+            top: 5px;
+            width: 16px;
+            height: 16px;
+            background: #667eea;
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px #667eea;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 30px;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.1em;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .social-link {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .social-link:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .header {
+                padding: 30px 20px;
+            }
+            
+            .section {
+                padding: 30px 20px;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .projects-grid,
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .name {
+                font-size: 2em;
+            }
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, rgba(102, 126, 234, 0.2) 0%, rgba(102, 126, 234, 0.2) 100%);
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <div class="profile-image">
+                <i class="fas fa-user"></i>
             </div>
-          </a>
-
-          <a href="#services">
-            <div class="item left_item">
-              <h2>Services</h2>
-              <p>As a software engineering student, I offer a range of services tailored to meet your technological needs.</p>
+            <h1 class="name">Your Name</h1>
+            <p class="title">Full-Stack Developer</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>your.email@example.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+60 123 456 789</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Johor, Malaysia</span>
+                </div>
             </div>
-          </a>
+        </header>
 
-          <a href="#testimonials">
-            <div class="item left_item">
-              <h2>Testimonials</h2>
-              <p>What Teachers and Classmates Say</p>
+        <!-- About Section -->
+        <section class="section">
+            <h2 class="section-title">
+                <i class="fas fa-user-circle"></i>
+                About Me
+            </h2>
+            <p style="font-size: 1.1em; line-height: 1.8; color: #555;">
+                Passionate <span class="highlight">Full-Stack Developer</span> with expertise in modern web technologies and frameworks. 
+                Experienced in building scalable web applications, implementing role-based access control systems, and creating 
+                responsive user interfaces. Strong background in both frontend and backend development with a focus on 
+                <span class="highlight">community-impact projects</span> and educational technology solutions.
+            </p>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="section">
+            <h2 class="section-title">
+                <i class="fas fa-code-branch"></i>
+                Featured Projects
+            </h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-date">April 2025</div>
+                    <h3 class="project-title">Google Drive Resource Sharing Management System</h3>
+                    <p class="project-role">Frontend & Backend Developer</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Vue.js</span>
+                        <span class="tech-tag">Perl (Mojolicious)</span>
+                        <span class="tech-tag">MariaDB</span>
+                        <span class="tech-tag">Docker</span>
+                    </div>
+                    <p class="project-description">
+                        Built a comprehensive single-page application for organizing and sharing academic files via Google Drive. 
+                        Implemented <strong>role-based access control</strong>, dynamic content loading using AJAX, and 
+                        containerized deployment with Docker for seamless scalability.
+                    </p>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-date">April 2025</div>
+                    <h3 class="project-title">TVPSS Management System</h3>
+                    <p class="project-role">Full-Stack Developer</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">Spring MVC</span>
+                        <span class="tech-tag">Thymeleaf</span>
+                        <span class="tech-tag">Tomcat</span>
+                        <span class="tech-tag">YouTube API</span>
+                    </div>
+                    <p class="project-description">
+                        Developed a robust web application to manage content and crew applications for Johor's school media program. 
+                        Features include <strong>YouTube API integration</strong>, role-based access for different user types 
+                        (students, admin, trainers), and responsive interfaces optimized for educational environments.
+                    </p>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-date">May 2024</div>
+                    <h3 class="project-title">Food Save Website</h3>
+                    <p class="project-role">Web Developer</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">PHP</span>
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">MySQL</span>
+                    </div>
+                    <p class="project-description">
+                        Designed and developed a community-focused website to support food sharing and donation efforts. 
+                        Enabled users to submit food listings, manage donations, and connect with recipients. 
+                        Emphasized <strong>simplicity and community impact</strong> in the user experience design.
+                    </p>
+                </div>
             </div>
-          </a>
-        </div>
+        </section>
 
-        <div class="in_menu right_menu">
-          <div class="item right_item">
-            <h2><a href="#about_me"> About me</a></h2>
-          </div>
+        <!-- Skills Section -->
+        <section class="section">
+            <h2 class="section-title">
+                <i class="fas fa-tools"></i>
+                Technical Skills
+            </h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Programming Languages</h3>
+                    <div class="skill-list">
+                        <span class="skill-item">C++</span>
+                        <span class="skill-item">Java</span>
+                        <span class="skill-item">JavaScript</span>
+                        <span class="skill-item">Dart</span>
+                        <span class="skill-item">PHP</span>
+                        <span class="skill-item">Perl</span>
+                    </div>
+                </div>
 
-          <div class="item right_item">
-            <h2><a href="#contact_info">Contact</a></h2>
-          </div>
-        </div>
-      </section>
+                <div class="skill-category">
+                    <h3><i class="fas fa-globe"></i> Web Development</h3>
+                    <div class="skill-list">
+                        <span class="skill-item">HTML</span>
+                        <span class="skill-item">CSS</span>
+                        <span class="skill-item">Vue.js</span>
+                        <span class="skill-item">AJAX</span>
+                        <span class="skill-item">JSON</span>
+                    </div>
+                </div>
 
-      <section class="main_content">
-        <div class="inner_content about_me" id="about_me">
-          <h2>About me</h2>
-          <p>
-            I am a motivated and detail-oriented software engineering student with 
-            a keen interest in web development and user-centered design. I have developed 
-            several academic projects and am currently seeking opportunities to apply my 
-            skills in a real-world work setting.
-          </p>
-        </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-server"></i> Backend & Frameworks</h3>
+                    <div class="skill-list">
+                        <span class="skill-item">Node.js</span>
+                        <span class="skill-item">Spring MVC</span>
+                        <span class="skill-item">Mojolicious (Perl)</span>
+                        <span class="skill-item">Maven</span>
+                    </div>
+                </div>
 
-        <div class="inner_content resume" id="resume">
-          <h2>Resume</h2>
+                <div class="skill-category">
+                    <h3><i class="fas fa-database"></i> Databases</h3>
+                    <div class="skill-list">
+                        <span class="skill-item">MySQL</span>
+                        <span class="skill-item">MongoDB</span>
+                        <span class="skill-item">MariaDB</span>
+                    </div>
+                </div>
 
-          <h3>Name: <span>Abdulrahman Daney</span></h3>
-          <h3>Education:</h3>
-          <ul>
-            <li>Bachelor of Arts in English Language</li>
-            <li>Bachelor of Software Engineering (in progress)</li>
-          </ul>
+                <div class="skill-category">
+                    <h3><i class="fas fa-paint-brush"></i> Design & Multimedia</h3>
+                    <div class="skill-list">
+                        <span class="skill-item">Adobe Photoshop</span>
+                        <span class="skill-item">Illustrator</span>
+                        <span class="skill-item">After Effects</span>
+                        <span class="skill-item">Premiere Pro</span>
+                    </div>
+                </div>
 
-          <h3>Skills:</h3>
-          <ul>
-            <li>Frontend: HTML, CSS, JavaScript, Vue.js, Dart</li>
-            <li>Backend: Java, Spring MVC, Node.js, PHP, Perl</li>
-            <li>Database: MySQL, MariaDB, MongoDB</li>
-            <li>Other Tools: Docker, Maven, AJAX, JSON</li>
-            <li>Design: Adobe Photoshop, Adobe Illustrator, After Effects</li>
-          </ul>
+                <div class="skill-category">
+                    <h3><i class="fas fa-wrench"></i> Tools & Technologies</h3>
+                    <div class="skill-list">
+                        <span class="skill-item">Visual Studio Code</span>
+                        <span class="skill-item">Git & GitHub</span>
+                        <span class="skill-item">Docker</span>
+                        <span class="skill-item">Tomcat</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-          <h3>Experience:</h3>
-          <ul>
-            <li>Graphic Designer – Badaa Alraqia Bookstore (2018–2021)</li>
-            <li>Academic Projects: Google Drive Resource System, TVPSS Management, Food Save Website</li>
-          </ul>
-        </div>
+        <!-- Experience Timeline -->
+        <section class="section">
+            <h2 class="section-title">
+                <i class="fas fa-briefcase"></i>
+                Professional Experience
+            </h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="project-date">2024 - Present</div>
+                    <h3 style="color: #667eea; margin-bottom: 10px;">Full-Stack Developer</h3>
+                    <p>Specializing in web application development with focus on educational technology and community-impact projects. 
+                    Experienced in implementing complex features like role-based access control, API integrations, and responsive design.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="project-date">2023 - 2024</div>
+                    <h3 style="color: #667eea; margin-bottom: 10px;">Web Developer</h3>
+                    <p>Developed various web solutions using modern frameworks and technologies. Gained expertise in both frontend 
+                    and backend development, database management, and deployment strategies.</p>
+                </div>
+            </div>
+        </section>
 
-        <div class="inner_content services" id="services">
-          <h2>Services</h2>
-          <ul>
-            <li>Web & Software Development</li>
-            <li>System Design & Architecture</li>
-            <li>UI/UX Prototyping</li>
-            <li>Graphic & Motion Design</li>
-            <li>Technical Documentation & Reports</li>
-          </ul>
-        </div>
-
-        <div class="inner_content testimonials" id="testimonials">
-          <h2>Testimonials</h2>
-          <ul>
-            <li>"Working with Daney in group projects was a pleasure; he always contributed innovative ideas."</li>
-            <li>"Daney's positive attitude and willingness to support others make him a valued team member."</li>
-            <li>"During discussions, Daney consistently brings fresh perspectives that enrich our learning."</li>
-          </ul>
-        </div>
-      </section>
-    </main>
-
-    <!-- footer  -->
-    <!-- these reference contact information is true and will lead to all my social media account -->
-    <footer>
-      <div class="footer">
-
-  <h3 >Contact me</h3>
-    <div class="contact_info" id="contact_info">
-      <div class="contact insta">
-        <a href="https://instagram.com/aboody_danei?r=nametag">
-          <img src="./contact_icons/insta.png" alt="Insagram logo" />
-        </a>
-      </div>
-
-      <div class="contact snap">
-        <a
-          href="https://www.snapchat.com/add/bendanei?share_id=BWB6QV0rSKaZsMPiko8FJg&locale=en_MY"
-        >
-          <img src="./contact_icons/snap.png" alt="Snap logo" />
-        </a>
-      </div>
-
-      <div class="contact facbook">
-        <a href="https://www.facebook.com/profile.php?id=100006430104404">
-          <img src="./contact_icons/facbook.png" alt="facebook logo" />
-        </a>
-      </div>
-
-      <div class="contact Linked_in">
-        <a
-          href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_google-one-tap-submit"
-        >
-          <img src="./contact_icons/LinkedIn.png" alt="linkedin logo" />
-        </a>
-      </div>
-
-      <div class="contact Githup">
-          <a
-          href="https://github.com/Aboodi-Daney?tab=repositories">
-          <img src="./contact_icons/github.png" alt="github logo" />
-        </a>
-          
-      </div>
-
-      <div class="contact email">
-          <a
-          href="https://mail.google.com/mail/u/1/?ogbl#inbox?compose=CllgCJvpbTCgMCSNNLxlrzDXWKvlVJtJGQfGVQpHjQWnKGTmxVdsxsDxpDHfthfffGhJWjgcKvB">
-          <img src="./contact_icons/gmail.png" alt="gmail logo" />
-        </a>
-      </div>
-
-      <div class="contact phone">
-          <a href="https://wa.me/966531117358">
-              <img src="./contact_icons/phone.png" alt="phone logo">
-               <img src="./contact_icons/whatsapp.png" alt="whatsap logo" style="border-radius: 5px;">
-      </div>
+        <!-- Call to Action -->
+        <section class="section" style="text-align: center;">
+            <h2 class="section-title" style="justify-content: center;">
+                <i class="fas fa-handshake"></i>
+                Let's Work Together
+            </h2>
+            <p style="font-size: 1.1em; margin-bottom: 25px; color: #555;">
+                Ready to bring your next project to life? I'm always excited to work on challenging and meaningful projects.
+            </p>
+            <a href="mailto:your.email@example.com" class="cta-button">
+                <i class="fas fa-envelope"></i> Get In Touch
+            </a>
+        </section>
     </div>
-  </div>
 
-    <div class="foot">
-      <p> &copy; 2024 Abdulrahman Abdullah Ahmed Daney. All Rights Reserved.</p>
-    
-    </div>
-  </footer>
-  </body>
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Full-Stack Developer Portfolio. Built with passion and modern web technologies.</p>
+        <div class="social-links">
+            <a href="#" class="social-link" title="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="#" class="social-link" title="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="#" class="social-link" title="Twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="social-link" title="Portfolio">
+                <i class="fas fa-globe"></i>
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections for animation
+        document.querySelectorAll('.section, .project-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Dynamic typing effect for the title
+        const title = document.querySelector('.title');
+        const titles = ['Full-Stack Developer', 'Web Developer', 'Software Engineer', 'Problem Solver'];
+        let currentTitle = 0;
+
+        function typeTitle() {
+            const current = titles[currentTitle];
+            let index = 0;
+            title.textContent = '';
+            
+            const typeInterval = setInterval(() => {
+                title.textContent += current[index];
+                index++;
+                
+                if (index === current.length) {
+                    clearInterval(typeInterval);
+                    setTimeout(() => {
+                        currentTitle = (currentTitle + 1) % titles.length;
+                        setTimeout(typeTitle, 500);
+                    }, 2000);
+                }
+            }, 100);
+        }
+
+        // Start typing effect after page load
+        setTimeout(typeTitle, 1000);
+
+        // Add hover effects to project cards
+        document.querySelectorAll('.project-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+                this.style.color = 'white';
+                this.querySelectorAll('.tech-tag').forEach(tag => {
+                    tag.style.background = 'rgba(255, 255, 255, 0.2)';
+                    tag.style.color = 'white';
+                    tag.style.borderColor = 'rgba(255, 255, 255, 0.3)';
+                });
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.background = 'linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)';
+                this.style.color = '#333';
+                this.querySelectorAll('.tech-tag').forEach(tag => {
+                    tag.style.background = 'rgba(102, 126, 234, 0.1)';
+                    tag.style.color = '#667eea';
+                    tag.style.borderColor = 'rgba(102, 126, 234, 0.2)';
+                });
+            });
+        });
+    </script>
+</body>
 </html>
