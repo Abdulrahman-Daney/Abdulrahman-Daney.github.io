@@ -3,377 +3,333 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Abdulrahman Daney | Software Engineer</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-      rel="stylesheet"
+    <meta
+      name="description"
+      content="Portfolio of Abdulrahman Daney, a junior full-stack developer building dependable web applications and AI-enabled experiences."
     />
+    <meta name="theme-color" content="#f7f9fc" />
+    <title>Abdulrahman Daney | Full-Stack Developer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <style>
-      body {
-        font-family: "Inter", sans-serif;
-        background-color: #0a0a0a;
-        color: #a1a1aa;
-      }
-      .fira-code {
-        font-family: "Fira Code", monospace;
-      }
-      .card-link {
-        display: block;
-        text-decoration: none;
-        color: inherit;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
-      .card-link:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
-          0 8px 10px -6px rgb(0 0 0 / 0.1);
-      }
-      .card-link .external-link-icon {
-        transition: color 0.3s ease;
-      }
-      .card-link:hover .external-link-icon {
-        color: #38bdf8;
-      }
-    </style>
+    <link rel="stylesheet" href="stylesheet.css" />
   </head>
-  <body class="antialiased">
-    <div class="container mx-auto max-w-4xl px-4 py-8 md:py-12">
-      <!-- Header Section -->
-      <header
-        class="flex flex-col md:flex-row items-center justify-between mb-12 md:mb-16"
-      >
-        <div class="flex items-center mb-6 md:mb-0">
-          <div class="mr-6">
-            <div
-              class="w-24 h-24 rounded-full bg-slate-800 flex items-center justify-center ring-4 ring-slate-700/50"
-            >
-              <i class="fas fa-user-astronaut text-5xl text-sky-400"></i>
-            </div>
-          </div>
-          <div>
-            <h1 class="text-3xl md:text-4xl font-bold text-slate-100">
-              Abdulrahman Daney
-            </h1>
-            <p class="text-lg text-sky-400 fira-code">
-              Software Engineering Student
-            </p>
-            <div class="mt-3 flex items-center text-sm text-slate-400">
-              <div class="flex items-center">
-                <i class="fa-solid fa-location-dot mr-2"></i>
-                <span>Johor, Malaysia</span>
-              </div>
-              <span class="mx-2">|</span>
-              <div id="live-clock" class="flex items-center fira-code">
-                <i class="fa-regular fa-clock mr-2"></i>
-                <span id="clock-time"></span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="flex space-x-4">
-          <a
-            href="https://github.com/abdulrahman-daney"
-            target="_blank"
-            class="text-slate-400 hover:text-sky-400 transition-colors duration-300"
-            ><i class="fab fa-github fa-2x"></i
-          ></a>
-          <a
-            href="https://www.linkedin.com/in/abdulrahman-daney-3bb663234/"
-            target="_blank"
-            class="text-slate-400 hover:text-sky-400 transition-colors duration-300"
-            ><i class="fab fa-linkedin fa-2x"></i
-          ></a>
-          <a
-            href="mailto:abood053111@gmail.com"
-            class="text-slate-400 hover:text-sky-400 transition-colors duration-300"
-            ><i class="fas fa-envelope fa-2x"></i
-          ></a>
-        </div>
-      </header>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
 
-      <!-- About Me Section -->
-      <section class="mb-12 md:mb-16">
-        <h2
-          class="text-2xl font-bold text-slate-200 mb-4 fira-code flex items-center"
+    <header class="site-header">
+      <div class="shell nav-wrap">
+        <a class="brand" href="#top" aria-label="Abdulrahman Daney, home">
+          <span class="brand-mark" aria-hidden="true">AD</span>
+          <span>Abdulrahman Daney</span>
+        </a>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
         >
-          <i class="fa-solid fa-code mr-3 text-sky-400"></i>About Me
-        </h2>
-        <div
-          class="bg-slate-900/70 border border-slate-800 rounded-lg p-6 text-base md:text-lg leading-relaxed"
-        >
-          <p>
-            I’m a passionate
-            <span class="text-sky-300 font-medium">full-stack developer</span>
-            with experience in modern web technologies such as
-            <span class="fira-code text-amber-300">Vue.js</span>,
-            <span class="fira-code text-green-300">Node.js</span>,
-            <span class="fira-code text-lime-300">Spring MVC</span>, and
-            <span class="fira-code text-blue-300">Docker</span>. I enjoy
-            building scalable applications and solving real-world problems
-            through clean, maintainable code. Currently pursuing my Software
-            Engineering degree at Universiti Teknologi Malaysia.
+          <span class="menu-line"></span>
+          <span class="menu-line"></span>
+          <span class="sr-only">Open navigation</span>
+        </button>
+
+        <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+          <a href="#about">About</a>
+          <a href="#work">Work</a>
+          <a href="#experience">Experience</a>
+          <a href="#contact">Contact</a>
+          <a class="nav-resume" href="Abdulrahman_Daney_Resume.pdf" download>
+            Résumé <span aria-hidden="true">↓</span>
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section id="top" class="hero shell" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Junior full-stack developer · Jazan, Saudi Arabia</p>
+          <h1 id="hero-title">Building useful software with care.</h1>
+          <p class="hero-intro">
+            I create dependable web applications and AI-enabled experiences,
+            from polished interfaces to secure APIs, data models, and delivery
+            pipelines.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#work">Explore my work</a>
+            <a class="button button-secondary" href="Abdulrahman_Daney_Resume.pdf" download>
+              Download résumé <span aria-hidden="true">↓</span>
+            </a>
+          </div>
+          <p class="availability">
+            <span class="status-dot" aria-hidden="true"></span>
+            Available immediately · Open to relocation within Saudi Arabia
           </p>
         </div>
-      </section>
 
-      <!-- Featured Projects Section -->
-      <section class="mb-12 md:mb-16">
-        <h2
-          class="text-2xl font-bold text-slate-200 mb-6 fira-code flex items-center"
-        >
-          <i class="fa-solid fa-star-of-life mr-3 text-sky-400"></i>Featured
-          Projects
-        </h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <!-- Project Card 1 -->
-          <a
-            href="https://github.com/Abdulrahman-Daney/utm-drive-resource-manager.git"
-            target="_blank"
-            class="card-link bg-slate-900/70 border border-slate-800 rounded-lg p-6"
-          >
-            <div class="flex justify-between items-start">
-              <h3 class="font-bold text-slate-100 text-lg mb-2">
-                Google Drive Resource Sharing System
-              </h3>
-              <i
-                class="fa-solid fa-arrow-up-right-from-square text-slate-500 external-link-icon"
-              ></i>
-            </div>
-            <p class="text-sm mb-4">
-              SPA for academic file organization and access control.
-            </p>
-            <div class="flex flex-wrap gap-2">
-              <span
-                class="bg-sky-900/50 text-sky-300 text-xs font-medium px-2.5 py-1 rounded-full fira-code"
-                >Vue.js</span
-              >
-              <span
-                class="bg-green-900/50 text-green-300 text-xs font-medium px-2.5 py-1 rounded-full fira-code"
-                >Node.js</span
-              >
-              <span
-                class="bg-blue-900/50 text-blue-300 text-xs font-medium px-2.5 py-1 rounded-full fira-code"
-                >Docker</span
-              >
-            </div>
-          </a>
-
-          <!-- Project Card 3 -->
-          <a
-            href="https://github.com/student-marks-system/student-marks-system.git"
-            target="_blank"
-            class="card-link bg-slate-900/70 border border-slate-800 rounded-lg p-6"
-          >
-            <div class="flex justify-between items-start">
-              <h3 class="font-bold text-slate-100 text-lg mb-2">
-                Course Mark Management System
-              </h3>
-              <i
-                class="fa-solid fa-arrow-up-right-from-square text-slate-500 external-link-icon"
-              ></i>
-            </div>
-            <p class="text-sm mb-4">
-              Multi-role web app for academic mark management with analytics and
-              performance tracking. (Semester 2025)
-            </p>
-            <div class="flex flex-wrap gap-2">
-              <span
-                class="bg-sky-900/50 text-sky-300 text-xs font-medium px-2.5 py-1 rounded-full fira-code"
-                >Vue.js</span
-              >
-              <span
-                class="bg-indigo-900/50 text-indigo-300 text-xs font-medium px-2.5 py-1 rounded-full fira-code"
-                >PHP Slim</span
-              >
-              <span
-                class="bg-teal-900/50 text-teal-300 text-xs font-medium px-2.5 py-1 rounded-full fira-code"
-                >MySQL</span
-              >
-              <span
-                class="bg-purple-900/50 text-purple-300 text-xs font-medium px-2.5 py-1 rounded-full fira-code"
-                >REST API</span
-              >
-            </div>
-          </a>
-          <!-- NEW Project Card 4 -->
-          <a
-            href="https://github.com/Abdulrahman-Daney/Person-BMI-Web-Application.git"
-            target="_blank"
-            class="card-link bg-slate-900/70 border border-slate-800 rounded-lg p-6"
-          >
-            <div class="flex justify-between items-start">
-              <h3 class="font-bold text-slate-100 text-lg mb-2">
-                BMI Calculator App – Flutter
-              </h3>
-              <i
-                class="fa-solid fa-arrow-up-right-from-square text-slate-500 external-link-icon"
-              ></i>
-            </div>
-            <p class="text-sm mb-4">
-              A fully functional Body Mass Index (BMI) Calculator built with
-              Flutter, featuring a clean UI and custom widgets for input.
-            </p>
-            <div class="flex flex-wrap gap-2">
-              <span
-                class="bg-cyan-900/50 text-cyan-300 text-xs font-medium px-2.5 py-1 rounded-full fira-code"
-                >Flutter</span
-              >
-              <span
-                class="bg-sky-900/50 text-sky-300 text-xs font-medium px-2.5 py-1 rounded-full fira-code"
-                >Dart</span
-              >
-            </div>
-          </a>
+        <div class="hero-portrait" aria-label="Portrait of Abdulrahman Daney">
+          <div class="portrait-backdrop" aria-hidden="true"></div>
+          <img
+            src="my photo2.jpg"
+            alt="Abdulrahman Daney wearing a navy suit"
+            width="864"
+            height="1195"
+            fetchpriority="high"
+          />
+          <p class="portrait-caption">Software engineering · Full stack · AI</p>
         </div>
       </section>
 
-      <!-- Skills & Experience Section -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-        <!-- Skills -->
-        <section>
-          <h2
-            class="text-2xl font-bold text-slate-200 mb-6 fira-code flex items-center"
-          >
-            <i class="fa-solid fa-lightbulb mr-3 text-sky-400"></i>Skills
-          </h2>
-          <div class="space-y-6">
-            <div>
-              <h3 class="font-semibold text-slate-300 mb-3">Languages</h3>
-              <div class="flex flex-wrap gap-2">
-                <span
-                  class="bg-slate-800 text-slate-300 text-sm font-medium px-3 py-1 rounded-md fira-code"
-                  >Java</span
-                >
-                <span
-                  class="bg-slate-800 text-slate-300 text-sm font-medium px-3 py-1 rounded-md fira-code"
-                  >C++</span
-                >
-                <span
-                  class="bg-slate-800 text-slate-300 text-sm font-medium px-3 py-1 rounded-md fira-code"
-                  >JavaScript</span
-                >
-                <span
-                  class="bg-slate-800 text-slate-300 text-sm font-medium px-3 py-1 rounded-md fira-code"
-                  >PHP</span
-                >
-                <span
-                  class="bg-slate-800 text-slate-300 text-sm font-medium px-3 py-1 rounded-md fira-code"
-                  >Perl</span
-                >
+      <section id="about" class="section shell" aria-labelledby="about-title">
+        <div class="section-label"><span>01</span> About</div>
+        <div class="about-grid">
+          <div class="about-image-wrap">
+            <img
+              src="my photo.jpg"
+              alt="Close portrait of Abdulrahman Daney"
+              width="603"
+              height="756"
+              loading="lazy"
+            />
+          </div>
+          <div class="about-copy">
+            <h2 id="about-title">A practical engineer with a people-first mindset.</h2>
+            <p class="lead">
+              I’m a Software Engineering degree candidate at Universiti Teknologi
+              Malaysia, graduating in November 2026. I enjoy turning complex
+              requirements into clear, maintainable products.
+            </p>
+            <p>
+              During six months at Asrix Prime, I worked on full-stack and
+              AI-enabled systems, including real-time voice experiences, semantic
+              search, and cross-platform automation. My current focus is modern
+              TypeScript development with Next.js, React, PostgreSQL, and Prisma.
+            </p>
+            <div class="about-facts" aria-label="Profile details">
+              <div>
+                <span>Based in</span>
+                <strong>Jazan, Saudi Arabia</strong>
               </div>
-            </div>
-            <div>
-              <h3 class="font-semibold text-slate-300 mb-3">
-                Frameworks & Libraries
-              </h3>
-              <div class="flex flex-wrap gap-2">
-                <span
-                  class="bg-slate-800 text-slate-300 text-sm font-medium px-3 py-1 rounded-md fira-code"
-                  >Spring MVC</span
-                >
-                <span
-                  class="bg-slate-800 text-slate-300 text-sm font-medium px-3 py-1 rounded-md fira-code"
-                  >Vue.js</span
-                >
-                <span
-                  class="bg-slate-800 text-slate-300 text-sm font-medium px-3 py-1 rounded-md fira-code"
-                  >Node.js</span
-                >
-                <span
-                  class="bg-slate-800 text-slate-300 text-sm font-medium px-3 py-1 rounded-md fira-code"
-                  >Mojolicious</span
-                >
+              <div>
+                <span>Education</span>
+                <strong>BSc Software Engineering</strong>
               </div>
-            </div>
-            <div>
-              <h3 class="font-semibold text-slate-300 mb-3">
-                Databases & Tools
-              </h3>
-              <div class="flex flex-wrap gap-2">
-                <span
-                  class="bg-slate-800 text-slate-300 text-sm font-medium px-3 py-1 rounded-md fira-code"
-                  >MySQL</span
-                >
-                <span
-                  class="bg-slate-800 text-slate-300 text-sm font-medium px-3 py-1 rounded-md fira-code"
-                  >MariaDB</span
-                >
-                <span
-                  class="bg-slate-800 text-slate-300 text-sm font-medium px-3 py-1 rounded-md fira-code"
-                  >MongoDB</span
-                >
-                <span
-                  class="bg-slate-800 text-slate-300 text-sm font-medium px-3 py-1 rounded-md fira-code"
-                  >Git & GitHub</span
-                >
-                <span
-                  class="bg-slate-800 text-slate-300 text-sm font-medium px-3 py-1 rounded-md fira-code"
-                  >Docker</span
-                >
+              <div>
+                <span>Languages</span>
+                <strong>Arabic & English</strong>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <!-- Experience -->
+      <section id="work" class="section section-tint" aria-labelledby="work-title">
+        <div class="shell">
+          <div class="section-heading">
+            <div class="section-label"><span>02</span> Selected work</div>
+            <div>
+              <h2 id="work-title">Recent projects</h2>
+              <p>Full-stack products shaped around real users and reliable delivery.</p>
+            </div>
+          </div>
+
+          <article class="project-featured">
+            <div class="project-number">01</div>
+            <div class="project-content">
+              <p class="project-type">E-commerce · July 2026 — present</p>
+              <h3>Dan Shop</h3>
+              <p>
+                An Arabic-first commerce platform for Saudi Arabia, covering
+                product variants, cart and checkout, customer accounts, seller
+                administration, fulfilment, shipment tracking, and verified reviews.
+              </p>
+              <div class="tags" aria-label="Technologies used">
+                <span>Next.js 16</span><span>React 19</span><span>TypeScript</span>
+                <span>PostgreSQL</span><span>Prisma</span>
+              </div>
+            </div>
+            <div class="project-aside">
+              <p>Built for secure, real-world operations</p>
+              <ul>
+                <li>14 relational data models</li>
+                <li>Role-based seller workflows</li>
+                <li>Authenticated payment receipts</li>
+                <li>Atomic inventory updates</li>
+              </ul>
+            </div>
+          </article>
+
+          <div class="project-grid">
+            <article class="project-card">
+              <div class="project-card-top">
+                <span class="project-number">02</span>
+                <span class="project-type">DevOps</span>
+              </div>
+              <h3>Automated CI/CD Pipeline</h3>
+              <p>
+                A five-stage Jenkins pipeline that builds, tests,
+                performance-checks, and deploys a containerised Spring Boot API
+                on every GitHub push.
+              </p>
+              <div class="tags" aria-label="Technologies used">
+                <span>Jenkins</span><span>Docker</span><span>JMeter</span>
+                <span>Spring Boot</span>
+              </div>
+            </article>
+
+            <a
+              class="project-card project-link"
+              href="https://github.com/student-marks-system/student-marks-system"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="View Course Mark Management System on GitHub"
+            >
+              <div class="project-card-top">
+                <span class="project-number">03</span>
+                <span class="project-arrow" aria-hidden="true">↗</span>
+              </div>
+              <h3>Course Mark Management System</h3>
+              <p>
+                A multi-role academic platform with authentication, automated
+                grade calculation, performance analytics, and tailored workflows.
+              </p>
+              <div class="tags" aria-label="Technologies used">
+                <span>Vue.js</span><span>PHP Slim</span><span>MySQL</span>
+                <span>REST API</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="section shell" aria-labelledby="experience-title">
+        <div class="section-heading">
+          <div class="section-label"><span>03</span> Experience</div>
+          <div>
+            <h2 id="experience-title">Where I’ve contributed</h2>
+            <p>Hands-on experience across product engineering, AI, and automation.</p>
+          </div>
+        </div>
+
+        <div class="experience-grid">
+          <article class="experience-main">
+            <div class="experience-meta">
+              <p>Sep 2025 — Feb 2026</p>
+              <p>Subang Jaya, Malaysia</p>
+            </div>
+            <div>
+              <p class="company">Asrix Prime Berhad</p>
+              <h3>Software Engineering Intern</h3>
+              <ul class="detail-list">
+                <li>
+                  Built a real-time voice streaming service with FastAPI,
+                  WebSockets, Whisper ASR, and the OpenAI Realtime API.
+                </li>
+                <li>
+                  Designed a retrieval-augmented legal analysis system for
+                  Malaysian Federal Legislation.
+                </li>
+                <li>
+                  Developed a Dify plugin connecting seven platforms for
+                  messaging and content workflows.
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <aside class="skills-panel" aria-labelledby="skills-title">
+            <h3 id="skills-title">Technical toolkit</h3>
+            <div class="skill-group">
+              <p>Core</p>
+              <span>TypeScript · JavaScript · Python · Java · SQL</span>
+            </div>
+            <div class="skill-group">
+              <p>Frontend</p>
+              <span>Next.js · React · Vue.js · Tailwind CSS</span>
+            </div>
+            <div class="skill-group">
+              <p>Backend</p>
+              <span>Node.js · NestJS · Express · FastAPI · Spring Boot</span>
+            </div>
+            <div class="skill-group">
+              <p>Data & delivery</p>
+              <span>PostgreSQL · Prisma · Docker · Jenkins · GitHub</span>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section education-section shell" aria-labelledby="education-title">
+        <div class="section-label"><span>04</span> Education</div>
+        <div class="education-list">
+          <article>
+            <p>Expected November 2026</p>
+            <h2 id="education-title">Bachelor of Computer Science</h2>
+            <span>Software Engineering · Universiti Teknologi Malaysia</span>
+          </article>
+          <article>
+            <p>Completed June 2019</p>
+            <h2>Bachelor of Arts</h2>
+            <span>English Language · Jazan University</span>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="contact-section">
+        <div class="shell contact-inner">
+          <div>
+            <p class="eyebrow">Let’s connect</p>
+            <h2>Have a role or project in mind?</h2>
+          </div>
+          <div class="contact-actions">
+            <a class="button button-light" href="mailto:abood053111@gmail.com">
+              Email me <span aria-hidden="true">↗</span>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/abdulrahman-daney-3bb663234/"
+              target="_blank"
+              rel="noreferrer"
+            >LinkedIn <span aria-hidden="true">↗</span></a>
+            <a
+              href="https://github.com/abdulrahman-daney"
+              target="_blank"
+              rel="noreferrer"
+            >GitHub <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell">
+        <p>© <span id="current-year"></span> Abdulrahman Daney</p>
+        <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
       </div>
-
-      <!-- Footer -->
-      <footer class="text-center mt-16 text-sm text-slate-500">
-        <p>
-          &copy; <span id="current-year"></span> Abdulrahman Daney. All Rights
-          Reserved.
-        </p>
-        <p class="mt-1">
-          Last updated: <span id="last-updated" class="fira-code"></span>
-        </p>
-      </footer>
-    </div>
+    </footer>
 
     <script>
-      // Live Clock and Dynamic Year/Date
-      function updateClock() {
-        const clockTimeEl = document.getElementById("clock-time");
-        if (clockTimeEl) {
-          const now = new Date();
-          const options = {
-            timeZone: "Asia/Kuala_Lumpur",
-            hour: "2-digit",
-            minute: "2-digit",
-            second: "2-digit",
-            hour12: true,
-          };
-          clockTimeEl.textContent =
-            now.toLocaleTimeString("en-US", options) + " (GMT+8)";
-        }
-      }
+      const menuButton = document.querySelector(".menu-toggle");
+      const navigation = document.querySelector(".site-nav");
 
-      const currentYearEl = document.getElementById("current-year");
-      if (currentYearEl) {
-        currentYearEl.textContent = new Date().getFullYear();
-      }
+      menuButton.addEventListener("click", () => {
+        const isOpen = menuButton.getAttribute("aria-expanded") === "true";
+        menuButton.setAttribute("aria-expanded", String(!isOpen));
+        navigation.classList.toggle("is-open", !isOpen);
+      });
 
-      const lastUpdatedEl = document.getElementById("last-updated");
-      if (lastUpdatedEl) {
-        // Updated date to reflect new changes
-        lastUpdatedEl.textContent = new Date(
-          "2025-06-27T18:12:00+08:00"
-        ).toLocaleString("en-US", {
-          month: "long",
-          day: "numeric",
-          year: "numeric",
+      navigation.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          menuButton.setAttribute("aria-expanded", "false");
+          navigation.classList.remove("is-open");
         });
-      }
+      });
 
-      setInterval(updateClock, 1000);
-      updateClock(); // initial call
+      document.getElementById("current-year").textContent = new Date().getFullYear();
     </script>
   </body>
 </html>
