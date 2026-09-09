@@ -734,10 +734,21 @@ a {
 }
 
 .contact-actions > a:not(.button) {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
   padding-block: 12px;
   color: #c6d4dd;
   font-size: 0.9rem;
   font-weight: 700;
+}
+
+.contact-icon {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 20px;
+  border-radius: 4px;
+  object-fit: contain;
 }
 
 .contact-actions > a:hover {
