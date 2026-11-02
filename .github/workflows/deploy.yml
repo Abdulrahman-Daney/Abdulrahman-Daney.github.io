@@ -1,0 +1,58 @@
+name: Deploy to GitHub Pages
+
+# Pushes to the redesign branch only assemble and check the site.
+# Only main deploys, so reviewing a branch never changes the live site.
+on:
+  push:
+    branches: [main, redesign]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Assemble the public files
+        run: |
+          mkdir _site
+          cp -r index.html 404.html robots.txt sitemap.xml ar assets documents certifications _site/
+
+      - name: Check that local links resolve
+        run: |
+          status=0
+          for page in _site/index.html _site/ar/index.html; do
+            dir=$(dirname "$page")
+            for ref in $(grep -oE '(href|src)="[^"#]+"' "$page" | sed -E 's/^[a-z]+="//; s/"$//' | grep -vE '^(https?:|mailto:|tel:)'); do
+              if [ ! -e "$dir/$ref" ]; then
+                echo "Missing: $ref in $page"
+                status=1
+              fi
+            done
+          done
+          exit $status
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
