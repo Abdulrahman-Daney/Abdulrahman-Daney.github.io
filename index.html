@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" class="no-js">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Abdulrahman Daney | Full-Stack Developer</title>
     <meta name="description" content="Abdulrahman Daney is a full-stack developer in Saudi Arabia building Arabic-first web applications, AI-enabled systems and automated delivery pipelines." />
-    <meta name="theme-color" content="#dfdedb" />
+    <meta name="theme-color" content="#0a7548" />
     <link rel="canonical" href="https://abdulrahman-daney.github.io/" />
     <link rel="alternate" hreflang="en" href="https://abdulrahman-daney.github.io/" />
     <link rel="alternate" hreflang="ar" href="https://abdulrahman-daney.github.io/ar/" />
@@ -23,7 +23,8 @@
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
-    <link rel="preload" href="assets/fonts/erode-400.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="assets/fonts/alexandria-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <script>(function(){var r=document.documentElement;r.classList.replace("no-js","js");try{var t=localStorage.getItem("theme");if(t==="dark"||t==="light")r.dataset.theme=t}catch(e){}})()</script>
     <link rel="stylesheet" href="assets/css/site.css" />
     <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Abdulrahman Daney", "alternateName": "عبدالرحمن دانعي", "jobTitle": "Full-Stack Developer", "url": "https://abdulrahman-daney.github.io/", "email": "mailto:abdulrahmandaney@gmail.com", "image": "https://abdulrahman-daney.github.io/assets/img/portrait-suit-896.webp", "sameAs": ["https://www.linkedin.com/in/abdulrahman-daney-3bb663234/", "https://github.com/Abdulrahman-Daney"], "knowsLanguage": ["ar", "en"], "address": {"@type": "PostalAddress", "addressLocality": "Jazan", "addressCountry": "SA"}, "alumniOf": [{"@type": "CollegeOrUniversity", "name": "Universiti Teknologi Malaysia"}, {"@type": "CollegeOrUniversity", "name": "Jazan University"}]}</script>
     <script src="assets/js/site.js" defer></script>
@@ -34,270 +35,264 @@
     <header class="bar">
       <a class="bar-name" href="#top" translate="no">Abdulrahman Daney</a>
       <nav class="bar-nav" aria-label="Sections">
-        <a href="#about">About</a>
         <a href="#work">Work</a>
         <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
+        <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </nav>
-      <a class="bar-lang" href="ar/" hreflang="ar" lang="ar" data-lang-switch>العربية</a>
-      <a class="bar-lang" href="documents/Abdulrahman_Daney_Full_Stack_Developer_CV.pdf" download>CV</a>
+      <a href="ar/" hreflang="ar" lang="ar" data-lang-switch>العربية</a>
+      <button class="theme-switch" type="button" data-dark="Dark" data-light="Light" data-dark-label="Switch to the dark theme" data-light-label="Switch to the light theme">Dark</button>
     </header>
 
     <main id="main">
-      <section id="top" class="hero split">
-        <figure class="stage">
-          <img
-            src="assets/img/portrait-suit-896.webp"
-            srcset="assets/img/portrait-suit-480.webp 480w, assets/img/portrait-suit-896.webp 896w"
-            sizes="(min-width: 900px) 50vw, 100vw"
-            alt="Abdulrahman Daney in a navy suit and grey tie, in an office with bookshelves"
-            width="896"
-            height="1084"
-            fetchpriority="high"
-          />
-        </figure>
-        <div class="column" data-rise-group>
-          <h1>Abdulrahman Daney <span class="role">Full-Stack Developer</span></h1>
-          <p class="say">I build full-stack web applications, from Arabic-first interfaces to APIs, databases and automated delivery.</p>
+      <section id="top" class="chapter chapter-green hero">
+        <h1><span class="l1">Abdulrahman <b>Daney</b></span><span class="l2">Full-stack developer</span></h1>
+        <p class="role-phone">Full-stack developer</p>
+        <div class="hero-say">
+          <p>I build Arabic-first web applications, from the interface to the database to the deploy.</p>
           <div class="hero-actions">
             <a class="action" href="documents/Abdulrahman_Daney_Full_Stack_Developer_CV.pdf" download>Download CV</a>
             <a class="text-link" href="#work">See my work</a>
           </div>
-          <a class="flip" href="ar/" hreflang="ar" lang="ar" data-lang-switch>اقرأ هذه الصفحة بالعربية</a>
-          <p class="facts">Jazan, Saudi Arabia. Available immediately, with a transferable Iqama. Open to relocation.</p>
         </div>
+        <a class="mirror" href="ar/" hreflang="ar" lang="ar" dir="rtl" data-lang-switch>
+          <span class="mirror-name">عبدالرحمن دانعي</span>
+          <span class="mirror-go">اقرأ الصفحة بالعربية</span>
+        </a>
+        <p class="facts">Jazan, Saudi Arabia. Available immediately, with a transferable Iqama. Open to relocation.</p>
       </section>
 
-      <section id="about" class="about split" aria-labelledby="about-h">
-        <div class="column" data-rise-group>
-          <h2 id="about-h">About</h2>
-          <p>I graduated from Universiti Teknologi Malaysia in October 2026 with a Bachelor of Computer Science in Software Engineering, with Honours. I enjoy turning complex requirements into clear, maintainable products.</p>
-          <p>During 6 months at Asrix Prime I worked on full-stack and AI-enabled systems, including real-time voice experiences, semantic search and cross-platform automation.</p>
-          <p>My current focus is modern TypeScript development with Next.js, React, PostgreSQL and Prisma. Monaliza, the Arabic-first store I built for the Saudi market, is where that work runs live.</p>
-          <p>Before computing I earned a Bachelor of Arts in English Language at Jazan University. I work in Arabic and English, which is why this site reads in both.</p>
-          <p class="signoff"><em>Abdulrahman Daney</em> <span>Full-Stack Developer</span></p>
-        </div>
-        <figure class="stage" data-rise>
-          <img src="assets/img/portrait-close-603.webp" alt="Abdulrahman Daney, close portrait" width="603" height="756" loading="lazy" decoding="async" />
-        </figure>
-      </section>
+      <section id="work" class="chapter work" aria-labelledby="work-h">
+        <h2 id="work-h" data-rise>Selected work</h2>
 
-      <section id="work" aria-labelledby="work-h">
-        <div class="work-head split" data-rise-group>
-          <h2 id="work-h">Selected work</h2>
-          <p>3 projects, from a live store to a release pipeline.</p>
-        </div>
-
-      <article class="project split">
-        <figure class="stage panel panel-shots" data-rise>
-          <img class="shot-wide" src="assets/img/monaliza-desktop.webp" alt="Monaliza storefront home page on a desktop screen, in Arabic" width="1200" height="594" loading="lazy" decoding="async" />
-          <figcaption>The live storefront, set right to left on desktop and phone.</figcaption>
-          <img class="shot-phone" src="assets/img/monaliza-phone.webp" alt="Monaliza storefront home page on a phone, in Arabic" width="480" height="689" loading="lazy" decoding="async" />
-        </figure>
-        <div class="column">
-          <h3 data-rise>Monaliza</h3>
-          <p class="project-meta">E-commerce. July 2026 to present.</p>
-          <dl class="project-parts" data-rise-group>
-            <div>
-              <dt>The problem</dt>
-              <!-- TODO: wording drawn from the CV and README. Confirm it describes the real problem. -->
-              <dd>A store for the Saudi market has to work in Arabic first, and take bank-transfer payments without overselling stock.</dd>
-            </div>
-            <div>
-              <dt>What I built</dt>
-              <dd><ul class="built">
-              <li>An Arabic-first commerce platform covering product variants, cart, checkout, customer accounts, seller administration, order fulfilment, shipment tracking and verified-purchase reviews.</li>
-              <li>14 relational Prisma models with variant-level inventory, checkout-time price snapshots, role-based access control and ownership-protected orders.</li>
-              <li>Credentials and Google OAuth authentication with protected server actions, account-status enforcement and separate seller authorization.</li>
-              <li>A bank-transfer workflow with authenticated receipt uploads, seller verification, serializable transactions, idempotent confirmation and atomic inventory updates.</li>
-              </ul></dd>
-            </div>
-            <div>
-              <dt>Tech</dt>
-              <dd translate="no">Next.js 16, React 19, TypeScript, PostgreSQL, Prisma, Tailwind CSS</dd>
-            </div>
-            <div>
-              <dt>Links</dt>
-              <dd><div class="link-row">
-              <a href="https://monaliza-store.vercel.app/" rel="noopener">Visit the live store</a>
-              </div>
-            <p>The source code is in a private repository.</p></dd>
-            </div>
-          </dl>
-        </div>
-      </article>
-
-      <article class="project split">
-        <div class="column">
-          <h3 data-rise>Automated CI/CD Pipeline</h3>
-          <p class="project-meta">DevOps. June to July 2026.</p>
-          <dl class="project-parts" data-rise-group>
-            <div>
-              <dt>The problem</dt>
-              <!-- TODO: wording drawn from the CV and README. Confirm it describes the real problem. -->
-              <dd>Every push to the Student Records API needed the same build, test and delivery steps, and a failed check had to stop the release.</dd>
-            </div>
-            <div>
-              <dt>What I built</dt>
-              <dd><ul class="built">
-              <li>A 7-stage Jenkins pipeline that runs on every GitHub push, with fail-fast release gating.</li>
-              <li>A containerised Spring Boot API with automated Docker Hub publishing, for repeatable pull-and-run deployment.</li>
-              <li>JMeter load testing with 10 concurrent users, and automated build-status comments in Jira.</li>
-              </ul></dd>
-            </div>
-            <div>
-              <dt>Tech</dt>
-              <dd translate="no">Jenkins, Docker, GitHub, JMeter, Maven, Spring Boot, Java</dd>
-            </div>
-            <div>
-              <dt>Links</dt>
-              <dd><div class="link-row">
-              <a href="https://github.com/Abdulrahman-Daney/studentrecords" rel="noopener">View the repository on GitHub</a>
-              </div></dd>
-            </div>
-          </dl>
-        </div>
-        <figure class="stage panel panel-blue" data-ui>
-          <ol class="pipeline" dir="ltr" lang="en" translate="no">
-            <li>Clone Repository</li>
-            <li>Build</li>
-            <li>Test</li>
-            <li>Performance Test</li>
-            <li>Build Docker Image</li>
-            <li>Push to Docker Hub</li>
-            <li>Update Jira</li>
-          </ol>
-          <figcaption>The stages in the project's Jenkinsfile. A failure stops everything after it.</figcaption>
-        </figure>
-      </article>
-
-      <article class="project split">
-        <figure class="stage panel panel-ink" data-rise>
-          <p class="marks" dir="ltr">70 + 30</p>
-          <p class="marks-key"><span>Continuous assessment 70%</span><span>Final exam 30%</span></p>
-          <figcaption>How a course total is made up, for lecturers, students and academic advisors.</figcaption>
-        </figure>
-        <div class="column">
-          <h3 data-rise>Course Mark Management System</h3>
-          <p class="project-meta">Team project. May to July 2025.</p>
-          <dl class="project-parts" data-rise-group>
-            <div>
-              <dt>The problem</dt>
-              <!-- TODO: wording drawn from the CV and README. Confirm it describes the real problem. -->
-              <dd>Lecturers, students and academic advisors each need a different view of the same course marks, and totals have to be calculated reliably.</dd>
-            </div>
-            <div>
-              <dt>What I built</dt>
-              <dd><ul class="built">
-              <li>A multi-role academic platform with authentication and workflows tailored to lecturers, students and academic advisors.</li>
-              <li>Automated grade calculation and performance analytics.</li>
-              </ul></dd>
-            </div>
-            <div>
-              <dt>Tech</dt>
-              <dd translate="no">Vue.js, PHP Slim, MySQL, REST API</dd>
-            </div>
-            <div>
-              <dt>Links</dt>
-              <dd><div class="link-row">
-              <a href="https://github.com/student-marks-system/student-marks-system" rel="noopener">View the repository on GitHub</a>
-              </div></dd>
-            </div>
-          </dl>
-        </div>
-      </article>
-      </section>
-
-      <section id="skills" class="skills" aria-labelledby="skills-h">
-        <h2 id="skills-h" data-rise>Skills</h2>
-        <dl class="skill-groups" data-rise-group>
-        <div><dt>Core</dt><dd translate="no">TypeScript, JavaScript, Python, Java, SQL</dd></div>
-        <div><dt>Frontend</dt><dd translate="no">Next.js, React, Vue.js, Tailwind CSS, HTML5, CSS3, responsive design</dd></div>
-        <div><dt>Backend</dt><dd translate="no">Node.js, NestJS, Express.js, FastAPI, Spring Boot, REST APIs, WebSockets</dd></div>
-        <div><dt>Data and auth</dt><dd translate="no">PostgreSQL, MySQL, MariaDB, MongoDB, Prisma, NextAuth.js, OAuth</dd></div>
-        <div><dt>DevOps and testing</dt><dd translate="no">Docker, Jenkins, CI/CD, GitHub, Maven, JUnit, Apache JMeter, Postman, Jira</dd></div>
-        <div><dt>AI and LLM</dt><dd translate="no">OpenAI API, OpenAI Realtime API, Whisper ASR, RAG, semantic search, Dify</dd></div>
-        </dl>
-      </section>
-
-      <div class="record split">
-        <section id="experience" aria-labelledby="experience-h" data-rise>
-          <h2 id="experience-h">Experience</h2>
-          <article class="entry" data-rise>
-            <h3>Software Engineering Intern</h3>
-            <p class="entry-meta">Asrix Prime Berhad, Subang Jaya, Malaysia. September 2025 to February 2026.</p>
-            <ul class="built">
-              <li>Built a real-time voice streaming service with Python, FastAPI and WebSockets, integrating Whisper ASR and the OpenAI Realtime API for voice-to-text-to-speech interaction.</li>
-              <li>Designed a RAG-based legal analysis system for Malaysian Federal Legislation, enabling semantic search and automated risk assessment across large legal document sets.</li>
-              <li>Developed a Dify Chatflow Invoker plugin integrating 7 platforms, including LinkedIn, Meta and Telegram, to automate cross-platform messaging and content workflows.</li>
+        <article class="project">
+          <figure class="project-visual shots" data-rise>
+            <div class="shot shot-wide"><img src="assets/img/monaliza-home.webp" alt="Home page of the Monaliza store on a desktop screen, in Arabic" width="1440" height="900" loading="lazy" decoding="async" /></div>
+            <div class="shot"><img src="assets/img/monaliza-product.webp" alt="A product page in the Monaliza store, with sizes and stock status" width="1200" height="833" loading="lazy" decoding="async" /></div>
+            <div class="shot shot-phone"><img src="assets/img/monaliza-phone.webp" alt="The Monaliza home page on a phone" width="480" height="689" loading="lazy" decoding="async" /></div>
+            <figcaption>The live store, set right to left on desktop and phone.</figcaption>
+          </figure>
+          <div class="project-text" data-rise-group>
+            <h3>Monaliza</h3>
+            <p class="project-lead">An Arabic-first online store for the Saudi market. Live since July 2026.</p>
+            <ul class="project-points">
+              <li>Catalogue, cart, checkout, customer accounts, seller admin, shipment tracking and verified reviews.</li>
+              <li>Bank-transfer payments with receipt upload and seller verification. Stock updates are atomic, so nothing oversells.</li>
+              <li>14 Prisma models, role-based access and Google sign-in.</li>
             </ul>
-          </article>
-        </section>
-        <section id="education" aria-labelledby="education-h" data-rise>
-          <h2 id="education-h">Education</h2>
-          <article class="entry">
-            <h3>Bachelor of Computer Science (Software Engineering) with Honours</h3>
-            <p class="entry-meta">Universiti Teknologi Malaysia, Johor Bahru. October 2026. CGPA 3.31 / 4.00.</p>
-          </article>
-          <article class="entry">
-            <h3>Bachelor of Arts in English Language</h3>
-            <p class="entry-meta">Jazan University, Saudi Arabia. January 2020. CGPA 4.26 / 5.00.</p>
-          </article>
-        </section>
-      </div>
+            <p class="project-tech" translate="no">Next.js 16, React 19, TypeScript, PostgreSQL, Prisma, Tailwind CSS</p>
+            <a class="action" href="https://monaliza-store.vercel.app/" rel="noopener">Visit the live store</a>
+            <p class="project-note">The source code is in a private repository.</p>
+          </div>
+        </article>
 
-      <section id="certifications" class="recognition" aria-labelledby="certifications-h">
-        <h2 id="certifications-h" data-rise>Certifications and achievements</h2>
-        <ul class="awards" data-rise-group>
-          <li class="award">
-            <h3>Dean’s List</h3>
-            <p>Universiti Teknologi Malaysia. GPA 3.77 in Semester II 2024/2025, and GPA 3.73 in Semester II 2023/2024.</p>
-            <div class="link-row">
-              <a href="certifications/deans-list-2024-2025.pdf" download>Download 2024/2025</a>
-              <a href="certifications/deans-list-2023-2024.pdf" download>Download 2023/2024</a>
+        <article class="project flip">
+          <div class="project-text" data-rise-group>
+            <h3>CI/CD pipeline</h3>
+            <p class="project-lead">Every push to GitHub builds, tests, load-tests and ships a Spring Boot API. One failed stage stops the release.</p>
+            <ul class="project-points">
+              <li>7 Jenkins stages with fail-fast release gating.</li>
+              <li>Docker images published to Docker Hub automatically.</li>
+              <li>JMeter load test with 10 concurrent users, and build status posted to Jira.</li>
+            </ul>
+            <p class="project-tech" translate="no">Jenkins, Docker, GitHub, JMeter, Maven, Spring Boot, Java</p>
+            <a class="text-link" href="https://github.com/Abdulrahman-Daney/studentrecords" rel="noopener">View the repository on GitHub</a>
+          </div>
+          <figure class="project-visual pipe" data-ui data-rise data-words='{"queued":"Queued","running":"Running","passed":"Passed","failed":"Failed","skipped":"Skipped","again":"Push another commit","started":"Commit pushed. The pipeline is running.","shipped":"All 7 stages passed. The image is on Docker Hub and Jira is updated.","stopped":"The tests failed, so the release stopped. Nothing was published."}'>
+            <div class="pipe-controls">
+              <button class="action pipe-push" type="button">Push a commit</button>
+              <label class="pipe-break"><input type="checkbox" /> Break the tests</label>
             </div>
-          </li>
-          <li class="award">
-            <h3>UTM AI Ideathon (Project-Based), participant</h3>
-            <p>Faculty of Computing, UTM, and MDEC. June 2025.</p>
-            <div class="link-row">
-              <a href="certifications/utm-ai-ideathon-2025.pdf" download>Download certificate</a>
-            </div>
-          </li>
-          <li class="award">
-            <h3>Succeed in the Age of AI</h3>
-            <p>Udemy. January 2026. 8.5 hours.</p>
-            <div class="link-row">
-              <a href="certifications/succeed-in-the-age-of-ai.pdf" download>Download certificate</a>
-            </div>
-          </li>
-          <li class="award">
-            <h3>Talent and Competency Management Course</h3>
-            <p>UTM Career Centre.</p>
-            <div class="link-row">
-              <a href="certifications/talent-and-competency-management.pdf" download>Download certificate</a>
-            </div>
-          </li>
-        </ul>
+            <ol class="pipe-stages" dir="ltr" lang="en" translate="no">
+              <li>Clone Repository <span class="state"></span></li>
+              <li>Build <span class="state"></span></li>
+              <li>Test <span class="state"></span></li>
+              <li>Performance Test <span class="state"></span></li>
+              <li>Build Docker Image <span class="state"></span></li>
+              <li>Push to Docker Hub <span class="state"></span></li>
+              <li>Update Jira <span class="state"></span></li>
+            </ol>
+            <p class="pipe-result" aria-live="polite">The 7 stages in the project's Jenkinsfile. A failure stops everything after it.</p>
+          </figure>
+        </article>
+
+        <article class="project">
+          <figure class="project-visual marks" data-rise>
+            <p class="marks-n" dir="ltr"><span data-count="70">70</span>%</p>
+            <p class="marks-n" dir="ltr"><span data-count="30">30</span>%</p>
+            <p class="marks-k">Continuous assessment</p>
+            <p class="marks-k">Final exam</p>
+          </figure>
+          <div class="project-text" data-rise-group>
+            <h3>Course Mark</h3>
+            <p class="project-lead">One set of course marks, three views: lecturer, student and academic advisor. Totals are calculated from 70% continuous assessment and 30% final exam.</p>
+            <ul class="project-points">
+              <li>Sign-in and workflows for each of the three roles.</li>
+              <li>Automatic grade calculation and performance analytics.</li>
+            </ul>
+            <p class="project-tech"><span translate="no">Vue.js, PHP Slim, MySQL, REST API.</span> Team project, May to July 2025.</p>
+            <a class="text-link" href="https://github.com/student-marks-system/student-marks-system" rel="noopener">View the repository on GitHub</a>
+          </div>
+        </article>
       </section>
 
-      <section id="contact" class="contact" aria-labelledby="contact-h">
-        <h2 id="contact-h" data-rise>Have a role or project in mind?</h2>
-        <a class="contact-email ltr" href="mailto:abdulrahmandaney@gmail.com" translate="no">abdulrahmandaney@gmail.com</a>
-        <div class="link-row">
-          <a href="tel:+966531117358">Call <span class="ltr">&nbsp;+966 53 111 7358</span></a>
-          <a href="https://wa.me/966531117358" rel="noopener">WhatsApp</a>
-          <a href="https://www.linkedin.com/in/abdulrahman-daney-3bb663234/" rel="noopener">LinkedIn</a>
-          <a href="https://github.com/Abdulrahman-Daney" rel="noopener">GitHub</a>
+      <section id="skills" class="chapter chapter-inverse skills" aria-labelledby="skills-h">
+        <h2 id="skills-h" data-rise>Skills</h2>
+        <div class="skill-groups" translate="no">
+          <div class="skill-group">
+            <h3 translate="yes">Languages</h3>
+            <ul data-rise-group>
+              <li><svg aria-hidden="true"><use href="assets/img/tech.svg#typescript" /></svg>TypeScript</li>
+              <li><svg aria-hidden="true"><use href="assets/img/tech.svg#javascript" /></svg>JavaScript</li>
+              <li><svg aria-hidden="true"><use href="assets/img/tech.svg#python" /></svg>Python</li>
+              <li><svg aria-hidden="true"><use href="assets/img/tech.svg#openjdk" /></svg>Java</li>
+              <li><svg aria-hidden="true"><use href="assets/img/tech.svg#php" /></svg>PHP</li>
+              <li><span class="dot" aria-hidden="true"></span>SQL</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3 translate="yes">Frontend</h3>
+            <ul data-rise-group>
+              <li><svg aria-hidden="true"><use href="assets/img/tech.svg#nextdotjs" /></svg>Next.js</li>
+              <li><svg aria-hidden="true"><use href="assets/img/tech.svg#react" /></svg>React</li>
+              <li><svg aria-hidden="true"><use href="assets/img/tech.svg#vuedotjs" /></svg>Vue.js</li>
+              <li><svg aria-hidden="true"><use href="assets/img/tech.svg#tailwindcss" /></svg>Tailwind CSS</li>
+              <li><svg aria-hidden="true"><use href="assets/img/tech.svg#html5" /></svg>HTML5</li>
+              <li><svg aria-hidden="true"><use href="assets/img/tech.svg#css3" /></svg>CSS3</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3 translate="yes">Backend</h3>
+            <ul data-rise-group>
+              <li><svg aria-hidden="true"><use href="assets/img/tech.svg#nodedotjs" /></svg>Node.js</li>
+              <li><svg aria-hidden="true"><use href="assets/img/tech.svg#nestjs" /></svg>NestJS</li>
+              <li><svg aria-hidden="true"><use href="assets/img/tech.svg#express" /></svg>Express.js</li>
+              <li><svg aria-hidden="true"><use href="assets/img/tech.svg#fastapi" /></svg>FastAPI</li>
+              <li><svg aria-hidden="true"><use href="assets/img/tech.svg#springboot" /></svg>Spring Boot</li>
+              <li><span class="dot" aria-hidden="true"></span>REST APIs and WebSockets</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3 translate="yes">Data and auth</h3>
+            <ul data-rise-group>
+              <li><svg aria-hidden="true"><use href="assets/img/tech.svg#postgresql" /></svg>PostgreSQL</li>
+              <li><svg aria-hidden="true"><use href="assets/img/tech.svg#mysql" /></svg>MySQL</li>
+              <li><svg aria-hidden="true"><use href="assets/img/tech.svg#mariadb" /></svg>MariaDB</li>
+              <li><svg aria-hidden="true"><use href="assets/img/tech.svg#mongodb" /></svg>MongoDB</li>
+              <li><svg aria-hidden="true"><use href="assets/img/tech.svg#prisma" /></svg>Prisma</li>
+              <li><span class="dot" aria-hidden="true"></span>NextAuth.js and OAuth</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3 translate="yes">DevOps and testing</h3>
+            <ul data-rise-group>
+              <li><svg aria-hidden="true"><use href="assets/img/tech.svg#docker" /></svg>Docker</li>
+              <li><svg aria-hidden="true"><use href="assets/img/tech.svg#jenkins" /></svg>Jenkins</li>
+              <li><svg aria-hidden="true"><use href="assets/img/tech.svg#github" /></svg>GitHub</li>
+              <li><svg aria-hidden="true"><use href="assets/img/tech.svg#apachemaven" /></svg>Maven</li>
+              <li><svg aria-hidden="true"><use href="assets/img/tech.svg#junit5" /></svg>JUnit</li>
+              <li><svg aria-hidden="true"><use href="assets/img/tech.svg#apachejmeter" /></svg>Apache JMeter</li>
+              <li><svg aria-hidden="true"><use href="assets/img/tech.svg#postman" /></svg>Postman</li>
+              <li><svg aria-hidden="true"><use href="assets/img/tech.svg#jira" /></svg>Jira</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3 translate="yes">AI and LLM</h3>
+            <ul data-rise-group>
+              <li><svg aria-hidden="true"><use href="assets/img/tech.svg#openai" /></svg>OpenAI API</li>
+              <li><svg aria-hidden="true"><use href="assets/img/tech.svg#openai" /></svg>OpenAI Realtime API</li>
+              <li><svg aria-hidden="true"><use href="assets/img/tech.svg#openai" /></svg>Whisper ASR</li>
+              <li><span class="dot" aria-hidden="true"></span>RAG</li>
+              <li><span class="dot" aria-hidden="true"></span>Semantic search</li>
+              <li><span class="dot" aria-hidden="true"></span>Dify</li>
+            </ul>
+          </div>
         </div>
-        <div><a class="action" href="documents/Abdulrahman_Daney_Full_Stack_Developer_CV.pdf" download>Download CV</a></div>
+      </section>
+
+      <section id="about" class="chapter about" aria-labelledby="about-h">
+        <h2 id="about-h" data-rise>About</h2>
+        <figure class="about-portrait" data-rise>
+          <img src="assets/img/portrait-suit-896.webp" srcset="assets/img/portrait-suit-480.webp 480w, assets/img/portrait-suit-896.webp 896w" sizes="(min-width: 600px) 34vw, 100vw" alt="Abdulrahman Daney in a navy suit and grey tie, in an office with bookshelves" width="896" height="1084" loading="lazy" decoding="async" />
+        </figure>
+        <div class="about-main" data-rise-group>
+          <p class="about-lead">I work in Arabic and English, and I enjoy turning complex requirements into clear, maintainable products. I graduated in Software Engineering from Universiti Teknologi Malaysia in October 2026, after a first degree in English Language.</p>
+          <dl class="fact-list">
+            <div><dt>Based in</dt><dd>Jazan, Saudi Arabia</dd></div>
+            <div><dt>Availability</dt><dd>Immediately, with a transferable Iqama</dd></div>
+            <div><dt>Languages</dt><dd>Arabic and English</dd></div>
+            <div><dt>Current focus</dt><dd translate="no">Next.js, React, PostgreSQL, Prisma</dd></div>
+          </dl>
+        </div>
+
+        <div class="record" id="experience">
+          <h3 data-rise>Experience</h3>
+          <div class="record-body" data-rise-group>
+            <article class="entry">
+              <p class="entry-title">Software Engineering Intern</p>
+              <p class="entry-when">Sep 2025 to Feb 2026</p>
+              <p class="entry-where">Asrix Prime Berhad, Subang Jaya, Malaysia</p>
+              <ul class="project-points">
+                <li>A real-time voice service with FastAPI, WebSockets, Whisper and the OpenAI Realtime API.</li>
+                <li>A RAG legal-analysis system for Malaysian Federal Legislation, with semantic search and risk assessment.</li>
+                <li>A Dify plugin that connects 7 platforms, including LinkedIn, Meta and Telegram.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+
+        <div class="record" id="education">
+          <h3 data-rise>Education</h3>
+          <div class="record-body" data-rise-group>
+            <article class="entry">
+              <p class="entry-title">BSc Computer Science (Software Engineering) with Honours</p>
+              <p class="entry-when">Oct 2026</p>
+              <p class="entry-where">Universiti Teknologi Malaysia, Johor Bahru. CGPA 3.31 / 4.00.</p>
+            </article>
+            <article class="entry">
+              <p class="entry-title">BA in English Language</p>
+              <p class="entry-when">Jan 2020</p>
+              <p class="entry-where">Jazan University, Saudi Arabia. CGPA 4.26 / 5.00.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="certifications" class="chapter certs" aria-labelledby="certifications-h">
+        <h2 id="certifications-h" data-rise>Certificates and awards</h2>
+        <table class="cert-table">
+          <thead>
+            <tr><th scope="col">Year</th><th scope="col">Title</th><th scope="col">From</th><th scope="col" class="get">Certificate</th></tr>
+          </thead>
+          <tbody data-rise-group>
+            <tr><td class="year">2026</td><td class="title">Succeed in the Age of AI</td><td class="body">Udemy, 8.5 hours</td><td class="get"><a href="certifications/succeed-in-the-age-of-ai.pdf" download aria-label="Download the Succeed in the Age of AI certificate">Download PDF</a></td></tr>
+            <tr><td class="year">2025</td><td class="title">Dean’s List, GPA 3.77</td><td class="body">Universiti Teknologi Malaysia, Semester II 2024/2025</td><td class="get"><a href="certifications/deans-list-2024-2025.pdf" download aria-label="Download the Dean’s List 2024/2025 certificate">Download PDF</a></td></tr>
+            <tr><td class="year">2025</td><td class="title">UTM AI Ideathon, participant</td><td class="body">Faculty of Computing, UTM, and MDEC</td><td class="get"><a href="certifications/utm-ai-ideathon-2025.pdf" download aria-label="Download the UTM AI Ideathon certificate">Download PDF</a></td></tr>
+            <tr><td class="year">2024</td><td class="title">Dean’s List, GPA 3.73</td><td class="body">Universiti Teknologi Malaysia, Semester II 2023/2024</td><td class="get"><a href="certifications/deans-list-2023-2024.pdf" download aria-label="Download the Dean’s List 2023/2024 certificate">Download PDF</a></td></tr>
+            <tr><td class="year"></td><td class="title">Talent and Competency Management</td><td class="body">UTM Career Centre</td><td class="get"><a href="certifications/talent-and-competency-management.pdf" download aria-label="Download the Talent and Competency Management certificate">Download PDF</a></td></tr>
+          </tbody>
+        </table>
       </section>
     </main>
 
-    <footer class="foot">
-      <p>© Abdulrahman Daney</p>
-      <a href="#top">Back to top</a>
+    <footer id="contact" class="chapter chapter-green close" aria-labelledby="contact-h">
+      <div class="close-invite" data-rise-group>
+        <h2 id="contact-h">Have a role in mind?</h2>
+        <a class="close-mail ltr" href="mailto:abdulrahmandaney@gmail.com" translate="no">abdulrahmandaney@gmail.com</a>
+        <a class="action" href="mailto:abdulrahmandaney@gmail.com?subject=A%20role%20for%20you">Email me</a>
+      </div>
+      <nav class="link-list" aria-label="Contact" data-rise-group>
+        <a href="https://wa.me/966531117358" rel="noopener">WhatsApp</a>
+        <a href="tel:+966531117358">Call <span class="ltr">&nbsp;+966 53 111 7358</span></a>
+        <a href="https://www.linkedin.com/in/abdulrahman-daney-3bb663234/" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/Abdulrahman-Daney" rel="noopener">GitHub</a>
+        <a href="documents/Abdulrahman_Daney_Full_Stack_Developer_CV.pdf" download>Download CV</a>
+      </nav>
+      <div class="credits">
+        <p>© 2026 Abdulrahman Daney</p>
+        <a href="#top">Back to top</a>
+      </div>
+      <p class="close-name" aria-hidden="true" translate="no">Abdulrahman Daney</p>
     </footer>
   </body>
 </html>
