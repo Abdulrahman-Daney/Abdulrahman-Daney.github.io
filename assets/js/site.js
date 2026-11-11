@@ -41,6 +41,7 @@
   var bar = document.querySelector(".bar");
   var chapters = Array.prototype.slice.call(document.querySelectorAll(".chapter"));
   var barChapter = null;
+  var barAtTop = null;
   function paintBar(force) {
     if (!bar || !chapters.length) return;
     var line = bar.offsetHeight / 2;
@@ -49,10 +50,13 @@
       var box = chapters[i].getBoundingClientRect();
       if (box.top <= line && box.bottom > line) { under = chapters[i]; break; }
     }
-    if (under === barChapter && !force) return;
+    var atTop = scrollY < 8;
+    if (under === barChapter && atTop === barAtTop && !force) return;
     barChapter = under;
+    barAtTop = atTop;
     var style = getComputedStyle(under);
-    bar.style.setProperty("--bar-bg", style.backgroundColor);
+    // At the very top the bar is clear, so the hero's light runs behind it.
+    bar.style.setProperty("--bar-bg", atTop ? "transparent" : style.backgroundColor);
     bar.style.setProperty("--bar-ink", style.color);
   }
   var ticking = false;
@@ -113,6 +117,60 @@
       }, { threshold: 0.5 });
       seen.observe(pipe);
     }
+  }
+
+
+  // The ticker is filled from the skills list, twice, so it can roll without a seam.
+  var track = document.querySelector(".ticker-track");
+  if (track) {
+    var items = document.querySelectorAll(".skill-group li");
+    for (var pass = 0; pass < 2; pass++) {
+      Array.prototype.forEach.call(items, function (item) {
+        if (item.querySelector("svg")) track.appendChild(item.cloneNode(true));
+      });
+    }
+    if (!reduce) track.classList.add("rolling");
+  }
+  var banner = document.querySelector(".banner-track");
+  if (banner && !reduce) {
+    banner.innerHTML += banner.innerHTML + banner.innerHTML + banner.innerHTML;
+    banner.classList.add("rolling");
+  }
+
+  // The hero sentence types its endings one after another.
+  var typed = document.querySelector(".typed");
+  if (typed && !reduce) {
+    var phrases = JSON.parse(typed.getAttribute("data-phrases"));
+    var phrase = 0;
+    var shown = phrases[0].length;
+    var erasing = true;
+    function type() {
+      var wait;
+      if (erasing) {
+        if (shown === phrases[phrase].length) { erasing = true; }
+        shown--;
+        wait = 28;
+        if (shown === 0) { erasing = false; phrase = (phrase + 1) % phrases.length; wait = 350; }
+      } else {
+        shown++;
+        wait = 55;
+        if (shown === phrases[phrase].length) { erasing = true; wait = 2200; }
+      }
+      typed.textContent = phrases[phrase].slice(0, shown);
+      setTimeout(type, wait);
+    }
+    setTimeout(type, 2200);
+  }
+
+  // A soft light follows the pointer across the navy fields.
+  if (!reduce && matchMedia("(pointer: fine)").matches) {
+    document.querySelectorAll(".chapter-navy").forEach(function (field) {
+      field.addEventListener("pointermove", function (event) {
+        var box = field.getBoundingClientRect();
+        field.style.setProperty("--mx", (event.clientX - box.left) + "px");
+        field.style.setProperty("--my", (event.clientY - box.top) + "px");
+      });
+    });
   }
 
   if (reduce || !("IntersectionObserver" in window)) return;
